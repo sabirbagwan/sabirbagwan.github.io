@@ -2,7 +2,8 @@
     display: block;
     overflow-x: auto;
     padding: 0.5em;
-    background: white;
+/*     background: white; */
+    background: #ADD8E6;
     color: #808080;
 }
 
