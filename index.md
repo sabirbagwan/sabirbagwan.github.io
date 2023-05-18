@@ -1,5 +1,5 @@
-Here you can say lots of fun things about your site.
+I am Sabir Bagwan. My interest lies in Data Science and Machine Learning. I am a self-taught individual, still learning from the open-source community online.
 
-Maybe say a some things about yourself.
+Python is the language of my choosing and I love to work and automate stuff with it. This website is where I like to document some of my work.
 
-Or maybe what you plan to blog about.
+You can reach out for any interesting work/research related field.
