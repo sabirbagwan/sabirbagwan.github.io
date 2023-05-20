@@ -4,5 +4,4 @@ Python is the language of my choosing and I love to work and automate stuff with
 
 You can reach out for any interesting work/research related field.
 
-![Image Alt Text](/assets/images/dp.png)
 
