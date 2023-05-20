@@ -1,17 +1,17 @@
 <style>
   @media (max-width: 768px) {
     .container {
-      flex-direction: column;
+      flex-direction: column-reverse;
       align-items: center;
     }
     .text {
       width: 100%;
       text-align: justify;
-      margin-top: 20px;
+      margin-bottom: 20px;
     }
     .photo {
       text-align: center;
-      margin-bottom: 20px;
+      margin-top: 20px;
     }
     .photo img {
       max-width: 200px;
@@ -21,9 +21,6 @@
 </style>
 
 <div class="container" style="display: flex;">
-  <div class="photo" style="flex: 1; width: 25%;">
-    <img src="assets/images/dp2.jpg" alt="Your Photo" style="max-width: 200px;">
-  </div>
   <div class="text" style="flex: 3; width: 65%; text-align: justify;">
     <h2>mark musk</h2>
     <p style="width: 100%;">My interest lies in Data Science and Machine Learning. I am a self-taught individual, still learning from the open-source community online.
@@ -32,5 +29,8 @@ You can reach out to me for any interesting work or research-related opportuniti
 frontiers of artificial intelligence and pushing the boundaries of innovation. I enjoy tackling complex problems and finding creative 
 solutions. I believe in the power of technology to positively impact the world, and I strive to contribute to meaningful projects 
 that make a difference.</p>
+  </div>
+  <div class="photo" style="flex: 1; width: 25%; text-align: center;">
+    <img src="assets/images/dp2.jpg" alt="Your Photo" style="max-width: 200px;">
   </div>
 </div>
