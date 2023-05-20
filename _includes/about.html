@@ -21,10 +21,32 @@
       text-align: center;
     }
   }
+  
+  @media (min-width: 769px) {
+    .container {
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    .text {
+      width: 75%;
+      text-align: justify;
+      margin-right: 20px;
+    }
+    .photo {
+      text-align: center;
+    }
+    .photo img {
+      max-width: 200px;
+      height: auto;
+    }
+    .header {
+      text-align: center;
+    }
+  }
 </style>
 
 <div class="container" style="display: flex;">
-  <div class="text" style="flex: 3; width: 65%; text-align: justify;">
+  <div class="text" style="flex: 3;">
     <h2 class="header">mark musk</h2>
     <p style="width: 100%;">My interest lies in Data Science and Machine Learning. I am a self-taught individual, still learning from the open-source community online.
 Python is the language of my choosing, and I love to work and automate tasks with it. This website is where I document some of my work. 
@@ -33,7 +55,7 @@ frontiers of artificial intelligence and pushing the boundaries of innovation. I
 solutions. I believe in the power of technology to positively impact the world, and I strive to contribute to meaningful projects 
 that make a difference.</p>
   </div>
-  <div class="photo" style="flex: 1; width: 25%; text-align: center;">
-    <img src="assets/images/dp1.jpg" alt="Your Photo" style="max-width: 200px;">
+  <div class="photo" style="flex: 1;">
+    <img src="assets/images/dp2.jpg" alt="Your Photo" style="max-width: 200px;">
   </div>
 </div>
