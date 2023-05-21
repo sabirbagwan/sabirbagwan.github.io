@@ -1,14 +1,10 @@
 <footer>
   <div class="container">
     <div class="footer-content">
-      <div class="footer-logo">
-        <h1>Logo</h1>
-        <p>&copy; {{ "now" | date: "%Y" }}</p>
-      </div>
       <div class="social-media">
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><img src="/assets/images/github.svg" alt="Github"></a>
+        <a href="#"><img src="/assets/images/twitter.svg" alt="Twitter"></a>
+        <a href="#"><img src="/assets/images/linkedin.svg" alt="Linkedin"></a>
       </div>
     </div>
   </div>
@@ -27,22 +23,13 @@
   }
 
   .footer-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     margin-bottom: 20px;
-  }
-
-  .footer-logo h1 {
-    font-size: 24px;
-    margin-bottom: 5px;
   }
 
   .social-media a {
     display: inline-block;
     margin: 0 5px;
-    font-size: 20px;
-    color: #333;
-    text-decoration: none;
+    width: 30px;
+    height: 30px;
   }
 </style>
