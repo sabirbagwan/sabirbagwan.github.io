@@ -1,58 +1,7 @@
----
+<!-- ---
 layout: default
 title: Work
 ---
-
-<!-- <link rel="stylesheet" href="/css/styles.css"> -->
-<!-- 
-<style>
-.thumbnail img {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-}
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.column {
-  width: 100%; /* Default width for mobile and tablet screens */
-  margin-bottom: 20px;
-}
-
-@media (max-width: 767px) { /* Apply styles for mobile screens */
-  .row {
-    justify-content: center;
-  }
-  .column {
-    width: 100%;
-  }
-}
-</style>
-
-<div class="row">
-  {% for project in site.data.projects reversed %}
-    <div class="column">
-      <a href="{{ project.url }}">
-        <div class="card">
-          <div class="thumbnail">
-            <img src="{{ project.image }}" alt="{{ project.title }}">
-          </div>
-          <h3>{{ project.title }}</h3>
-          <p>{{ project.description }}</p>
-        </div>
-      </a>
-    </div>
-
-    {% if forloop.index0 % 3 == 2 %}
-      </div><div class="row">
-    {% endif %}
-  {% endfor %}
-</div>
- -->
 
 
 <!DOCTYPE html>
@@ -83,15 +32,10 @@ title: Work
       margin-bottom: 20px;
     }
 
-/*     @media (max-width: 767px) {
-      .row {
-        justify-content: center;
-      }
-      .column {
-        width: 100%;
-      }
-    }
-     */
+    
+    
+    
+    
     @media (max-width: 767px) {
   .row {
     justify-content: center;
@@ -125,3 +69,76 @@ title: Work
   </div>
 </body>
 </html>
+
+
+
+
+ -->
+
+
+
+
+---
+layout: default
+title: Work
+---
+
+<link rel="stylesheet" href="/css/styles.css">
+
+<style>
+.thumbnail img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.column {
+  flex: 0 0 32%;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card {
+  text-align: center;
+}
+.divider {
+  border-bottom: 1px dashed #ccc;
+  margin-bottom: 20px;
+}
+.row:after {
+  content: "";
+  flex: auto;
+}
+@media (max-width: 767px) {
+  .row {
+    justify-content: center;
+  }
+  .column {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+</style>
+
+<div class="row">
+  {% for project in site.data.projects reversed %}
+    <div class="column">
+      <a href="{{ project.url }}">
+        <div class="card">
+          <div class="thumbnail">
+            <img src="{{ project.image }}" alt="{{ project.title }}">
+          </div>
+          <h3>{{ project.title }}</h3>
+          <p>{{ project.description }}</p>
+        </div>
+      </a>
+    </div>
+  {% endfor %}
+</div>
+
