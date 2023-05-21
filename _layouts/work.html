@@ -107,8 +107,6 @@ title: Work
 
 
 
-
-
 ---
 layout: default
 title: Work
@@ -130,6 +128,7 @@ title: Work
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+      margin-bottom: -20px; /* Remove extra margin at the bottom */
     }
 
     .column {
@@ -169,11 +168,13 @@ title: Work
           </div>
         </a>
       </div>
-      {% if forloop.index0 == projectsCount | minus: 2 %}
-        <div class="column"></div>
-      {% endif %}
     {% endfor %}
+    {% assign remainingProjects = 3 | minus: (projectsCount | modulo: 3) %}
+    {% if remainingProjects > 0 and remainingProjects < 3 %}
+      {% for i in (1..remainingProjects) %}
+        <div class="column" style="visibility: hidden;"></div>
+      {% endfor %}
+    {% endif %}
   </div>
 </body>
 </html>
-
