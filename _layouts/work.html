@@ -11,8 +11,11 @@ title: Work
   height: 300px;
   object-fit: cover;
 }
+.divider {
+  border-bottom: 1px dashed #ccc;
+  margin-bottom: 20px;
+}
 </style>
-
 
 <div class="row">
   {% for project in site.data.projects reversed %}
@@ -23,8 +26,10 @@ title: Work
             <img src="{{ project.image }}" alt="{{ project.title }}">
           </div>
           <h3>{{ project.title }}</h3>
+          <p>{{ project.description }}</p>
         </div>
       </a>
+      <div class="divider"></div>
     </div>
 
     {% if forloop.index0 % 3 == 2 %}
