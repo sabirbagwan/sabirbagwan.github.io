@@ -1,32 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }}</title>
-  <link rel="stylesheet" href="/css/styles.css">
-</head>
-<body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/work">Work</a></li>
-        <li><a href="/blog">Blog</a></li>
-      </ul>
-    </nav>
-  </header>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-  <main>
-    <div class="container">
-      {{ content }}
-    </div>
-  </main>
+  {%- include head.html -%}
 
-  <footer>
-    <div class="container">
-      <p>&copy; {{ site.author }} - {{ site.title }} {{ "now" | date: "%Y" }}</p>
+  <body>
+
+    <div class="no-print">
+      {%- include header.html -%}
     </div>
-  </footer>
-</body>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </main>
+
+    <div class="no-print">
+      {%- include footer.html -%}
+    </div>
+  </body>
+
 </html>
