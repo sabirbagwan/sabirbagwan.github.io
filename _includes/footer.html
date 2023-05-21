@@ -1,10 +1,15 @@
 <footer>
   <div class="container">
     <div class="footer-content">
+    <div class="footer-bottom">
+      <p>&copy; {{ site.author }} - {{ site.title }} {{ "now" | date: "%Y" }}</p>
+    </div>
       <div class="social-media">
         <a href="#"><img src="/assets/images/github.svg" alt="Github"></a>
         <a href="#"><img src="/assets/images/twitter.svg" alt="Twitter"></a>
         <a href="#"><img src="/assets/images/linkedin.svg" alt="Linkedin"></a>
+        <a href="#"><img src="/assets/images/gmail.svg" alt="Gmail"></a>
+        <a href="#"><img src="/assets/images/kaggle.svg" alt="Kaggle"></a>
       </div>
     </div>
   </div>
@@ -29,7 +34,13 @@
   .social-media a {
     display: inline-block;
     margin: 0 5px;
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
+  }
+  
+  
+    .footer-bottom p {
+    font-size: 14px;
+    color: #777;
   }
 </style>
