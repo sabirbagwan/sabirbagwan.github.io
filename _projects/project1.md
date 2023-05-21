@@ -1,5 +1,5 @@
 ---
-title: Project 1
+title: Whatsapp Group Analyser
 image: /assets/images/dp1.jpg
-url: https://example.com/project1](https://twitter.com/sabirbagwan_
+url: https://sabirbagwan-whatsappgroupanalysisstreamlit-app-ax04mz.streamlit.app/
 ---
