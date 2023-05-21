@@ -2,6 +2,7 @@
   image: /assets/images/dp1.jpg
   description: test 123
   link: /projects/project1.html
+  url: https://sabirbagwan-whatsappgroupanalysisstreamlit-app-ax04mz.streamlit.app/
 
 - title: Project 2
   image: /path/to/project2.jpg
