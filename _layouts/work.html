@@ -102,9 +102,6 @@ title: Work
 
  -->
 
-
-
-
 ---
 layout: default
 title: Work
@@ -138,11 +135,6 @@ title: Work
       margin-bottom: 20px;
     }
     
-    /* Hide the last column when the total number of projects is a multiple of 3 */
-    .row:last-child .column:last-child {
-      display: none;
-    }
-    
     @media (max-width: 767px) {
       .row {
         justify-content: center;
@@ -159,6 +151,8 @@ title: Work
 <body>
   <h1>My Work/Projects</h1>
   <div class="row">
+    {% assign totalProjects = site.data.projects.size %}
+    {% assign emptySpot = 3 | minus: (totalProjects | modulo: 3) %}
     {% for project in site.data.projects reversed %}
       <div class="column">
         <a href="{{ project.url }}">
@@ -172,6 +166,12 @@ title: Work
         </a>
       </div>
     {% endfor %}
+    {% if emptySpot > 0 and emptySpot < 3 %}
+      {% for i in (1..emptySpot) %}
+        <div class="column"></div>
+      {% endfor %}
+    {% endif %}
   </div>
 </body>
 </html>
+
