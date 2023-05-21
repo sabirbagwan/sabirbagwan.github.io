@@ -57,7 +57,7 @@ layout: default
 </div>
 
  -->
-
+<!-- 
 <!DOCTYPE html>
 <html>
 <head>
@@ -84,5 +84,31 @@ layout: default
   </div>
 </body>
 </html>
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="row">
+    {% for project in site.data.projects %}
+      <div class="column">
+        <a href="{{ project.url }}">
+          <div class="card">
+            <div class="thumbnail">
+              <img src="{{ project.image }}" alt="{{ project.title }}">
+            </div>
+            <h3>{{ project.title }}</h3>
+          </div>
+        </a>
+      </div>
 
+      {% if forloop.index0 % 3 == 2 %}
+        </div><div class="row">
+      {% endif %}
+    {% endfor %}
+  </div>
+</body>
+</html>
 
