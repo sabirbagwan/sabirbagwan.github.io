@@ -5,14 +5,23 @@ title: Work
 
 <link rel="stylesheet" href="/css/styles.css">
 
+<style>
+.thumbnail img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+</style>
+
+
 <div class="row">
   {% for project in site.data.projects reversed %}
     <div class="column">
       <a href="{{ project.url }}">
         <div class="card">
-<!--           <div class="thumbnail">
+          <div class="thumbnail">
             <img src="{{ project.image }}" alt="{{ project.title }}">
-          </div> -->
+          </div>
           <h3>{{ project.title }}</h3>
         </div>
       </a>
