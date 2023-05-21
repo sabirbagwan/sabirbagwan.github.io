@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+<div class="row">
+  {% for project in site.projects %}
+    <div class="column">
+      <a href="{{ project.url }}">
+        <img src="{{ project.image }}" alt="{{ project.title }}">
+        <h3>{{ project.title }}</h3>
+      </a>
+    </div>
+  {% endfor %}
+</div>
