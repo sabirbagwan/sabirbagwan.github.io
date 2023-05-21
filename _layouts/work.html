@@ -4,7 +4,7 @@ title: Work
 ---
 
 <!-- <link rel="stylesheet" href="/css/styles.css"> -->
-
+<!-- 
 <style>
 .thumbnail img {
   width: 200px;
@@ -52,3 +52,62 @@ title: Work
     {% endif %}
   {% endfor %}
 </div>
+ -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Work</title>
+  <style>
+    .thumbnail img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .column {
+      width: calc(33.33% - 10px); /* Adjust the width as per your layout */
+      margin-bottom: 20px;
+    }
+
+    .divider {
+      border-bottom: 1px dashed #ccc;
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 767px) {
+      .row {
+        justify-content: center;
+      }
+      .column {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="row">
+    {% for project in site.data.projects reversed %}
+      <div class="column">
+        <a href="{{ project.url }}">
+          <div class="card">
+            <div class="thumbnail">
+              <img src="{{ project.image }}" alt="{{ project.title }}">
+            </div>
+            <h3>{{ project.title }}</h3>
+            <p>{{ project.description }}</p>
+          </div>
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+</body>
+</html>
