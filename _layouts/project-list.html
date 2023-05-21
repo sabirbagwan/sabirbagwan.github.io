@@ -1,3 +1,19 @@
+<!-- ---
+layout: default
+---
+
+<div class="row">
+  {% for project in site.projects %}
+    <div class="column">
+      <a href="{{ project.url }}">
+        <img src="{{ project.image }}" alt="{{ project.title }}">
+        <h3>{{ project.title }}</h3>
+      </a>
+    </div>
+  {% endfor %}
+</div>
+ -->
+
 ---
 layout: default
 ---
@@ -10,5 +26,9 @@ layout: default
         <h3>{{ project.title }}</h3>
       </a>
     </div>
+
+    {% if forloop.index0 % 3 == 2 %}
+      </div><div class="row">
+    {% endif %}
   {% endfor %}
 </div>
