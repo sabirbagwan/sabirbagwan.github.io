@@ -19,8 +19,14 @@ title: Work
 }
 
 .column {
-  width: calc(33.33% - 10px); /* Adjust the width as per your layout */
+  width: 100%; /* Default width for mobile and tablet screens */
   margin-bottom: 20px;
+}
+
+@media (min-width: 768px) { /* Apply styles for tablet and larger screens */
+  .column {
+    width: calc(33.33% - 10px); /* Adjust the width as per your layout */
+  }
 }
 </style>
 
