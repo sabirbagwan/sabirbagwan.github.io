@@ -14,4 +14,28 @@
   description: This is the description for Project 3.
   link: /projects/project3.html
 
+- title: Project 4
+  image: /path/to/project3.jpg
+  description: This is the description for Project 3.
+  link: /projects/project3.html
+  
+- title: Project 5
+  image: /path/to/project3.jpg
+  description: This is the description for Project 3.
+  link: /projects/project3.html
+  
+- title: Project 6
+  image: /path/to/project3.jpg
+  description: This is the description for Project 3.
+  link: /projects/project3.html
+
+- title: Project 7
+  image: /path/to/project3.jpg
+  description: This is the description for Project 3.
+  link: /projects/project3.html
+  
+- title: Project 8
+  image: /path/to/project3.jpg
+  description: This is the description for Project 3.
+  link: /projects/project3.html
 # Add more projects as needed
