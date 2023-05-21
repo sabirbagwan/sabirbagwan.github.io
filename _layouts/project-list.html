@@ -69,7 +69,9 @@ layout: default
       <div class="column">
         <a href="{{ project.url }}">
           <div class="card">
-            <img src="{{ project.image }}" alt="{{ project.title }}" width="250">
+            <div class="thumbnail">
+              <img src="{{ project.image }}" alt="{{ project.title }}">
+            </div>
             <h3>{{ project.title }}</h3>
           </div>
         </a>
@@ -82,4 +84,5 @@ layout: default
   </div>
 </body>
 </html>
+
 
