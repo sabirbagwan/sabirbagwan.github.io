@@ -38,7 +38,7 @@ layout: default
 ---
 layout: default
 ---
-
+<!-- 
 <div class="row">
   {% for project in site.projects %}
     <div class="column">
@@ -55,4 +55,31 @@ layout: default
     {% endif %}
   {% endfor %}
 </div>
+
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="row">
+    {% for project in site.projects %}
+      <div class="column">
+        <a href="{{ project.url }}">
+          <div class="card">
+            <img src="{{ project.image }}" alt="{{ project.title }}" width="250">
+            <h3>{{ project.title }}</h3>
+          </div>
+        </a>
+      </div>
+
+      {% if forloop.index0 % 3 == 2 %}
+        </div><div class="row">
+      {% endif %}
+    {% endfor %}
+  </div>
+</body>
+</html>
 
