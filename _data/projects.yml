@@ -1,7 +1,7 @@
 - title: Whatsapp Analyser
   image: /assets/images/projectthumbnail/Wa.png
   description: This Streamlit app give a detailed analysis of the group memebers and their contributions
-  link: /projects/project1.html
+#   link: /projects/project1.html
   url: https://sabirbagwan-whatsappgroupanalysisstreamlit-app-ax04mz.streamlit.app/
 #   url: https://twitter.com/home
 
