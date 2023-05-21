@@ -15,10 +15,10 @@
   description: This is the description for Project 3.
   link: /projects/project3.html
 
-- title: Project 4
-  image: /assets/images/dp1.jpg
-  description: This is the description for Project 3.
-  link: /projects/project3.html
+# - title: Project 4
+#   image: /assets/images/dp1.jpg
+#   description: This is the description for Project 3.
+#   link: /projects/project3.html
   
 # - title: Project 5
 #   image: /assets/images/dp1.jpg
