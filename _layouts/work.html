@@ -1,4 +1,4 @@
----
+<!-- ---
 layout: default
 title: Work
 ---
@@ -100,3 +100,78 @@ title: Work
 
 
 
+ -->
+
+
+
+
+---
+layout: default
+title: Work
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Work</title>
+  <style>
+    .thumbnail img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .column {
+      width: calc(33.33% - 10px); /* Adjust the width as per your layout */
+      margin-bottom: 20px;
+    }  
+    
+    .divider {
+      border-bottom: 1px dashed #ccc;
+      margin-bottom: 20px;
+    }
+    
+    /* Hide the last column when the total number of projects is a multiple of 3 */
+    .row:last-child .column:last-child {
+      display: none;
+    }
+    
+    @media (max-width: 767px) {
+      .row {
+        justify-content: center;
+      }
+      
+      .column {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>My Work/Projects</h1>
+  <div class="row">
+    {% for project in site.data.projects reversed %}
+      <div class="column">
+        <a href="{{ project.url }}">
+          <div class="card">
+            <div class="thumbnail">
+              <img src="{{ project.image }}" alt="{{ project.title }}">
+            </div>
+            <h3>{{ project.title }}</h3>
+            <p>{{ project.description }}</p>
+          </div>
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+</body>
+</html>
