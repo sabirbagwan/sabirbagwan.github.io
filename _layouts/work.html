@@ -46,7 +46,15 @@ title: Work
     justify-content: center;
   }
 }
-    
+    .row:after {
+      content: "";
+      width: calc(33.33% - 10px); /* Adjust the width as per your layout */
+    }
+
+    /* Remove the last empty spot when the total number of projects is a multiple of 3 */
+    .row:last-child:after {
+      display: none;
+    }
     
     
   </style>
