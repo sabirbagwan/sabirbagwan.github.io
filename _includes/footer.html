@@ -1,4 +1,20 @@
-{% if page.layout != 'footer' %}
-  <h1>{{ site.title }}</h1>
-  <p>{{ site.author }}</p>
-{% endif %}
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <h1>{{ site.title }}</h1>
+<!--         <p>{{ site.author }}</p> -->
+      </div>
+      <div class="footer-links">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/work">Work</a></li>
+          <li><a href="/blog">Blog</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; {{ site.author }} - {{ site.title }} {{ "now" | date: "%Y" }}</p>
+    </div>
+  </div>
+</footer>
