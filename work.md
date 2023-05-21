@@ -1,5 +1,5 @@
 ---
 layout: work
-title: My Work
+title: Work
 permalink: /work/
 ---
