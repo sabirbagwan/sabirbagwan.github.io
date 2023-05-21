@@ -1,0 +1,24 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+}
+
+.column {
+  flex: 33.33%;
+  padding: 10px;
+}
+
+.card {
+  background-color: #f9f9f9;
+  padding: 20px;
+  text-align: center;
+}
+
+h3 {
+  margin-top: 10px;
+}
+
+img {
+  width: 100%;
+}
