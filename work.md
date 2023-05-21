@@ -3,7 +3,7 @@
 title: Work
 layout: default
 ---
-{%- include work.html -%}
+<!-- {%- include work.html -%} -->
 
 {% for tag in site.tags %}
   <h3>{{ tag[0] }}</h3>
