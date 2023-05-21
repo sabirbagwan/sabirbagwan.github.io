@@ -1,5 +1,5 @@
 ---
 title: Project 1
 image: /assets/images/dp1.jpg
-url: [https://example.com/project1](https://twitter.com/sabirbagwan_)
+url: https://example.com/project1](https://twitter.com/sabirbagwan_
 ---
