@@ -15,6 +15,12 @@ author: "Sabir Bagwan"
 #youtube_username: username
 #googleplus_username: +username
 
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:title/
+
 #########################################################################################
 ######### Nothing below needs to be changed (unless you know what you're doing) #########
 #########################################################################################
