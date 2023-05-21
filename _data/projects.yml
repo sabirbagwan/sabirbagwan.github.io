@@ -1,9 +1,9 @@
-- title: Whatsapp Group
+- title: Whatsapp Analyser
   image: /assets/images/dp1.jpg
-  description: test 123
+  description: This Streamlit app give a detailed analysis of the group memebers
   link: /projects/project1.html
-#   url: https://sabirbagwan-whatsappgroupanalysisstreamlit-app-ax04mz.streamlit.app/
-  url: https://twitter.com/home
+  url: https://sabirbagwan-whatsappgroupanalysisstreamlit-app-ax04mz.streamlit.app/
+#   url: https://twitter.com/home
 
 - title: Project 2
 #   image: /path/to/project2.jpg
@@ -29,24 +29,24 @@
   description: This is the description for Project 3.
   link: /projects/project3.html
   
-- title: Project 6
-#   image: /path/to/project3.jpg
-  image: /assets/images/dp1.jpg
-  description: This is the description for Project 3.
-  link: /projects/project3.html
+# - title: Project 6
+# #   image: /path/to/project3.jpg
+#   image: /assets/images/dp1.jpg
+#   description: This is the description for Project 3.
+#   link: /projects/project3.html
 
-- title: Project 7
-#   image: /path/to/project3.jpg
-  image: /assets/images/dp1.jpg
-  description: This is the description for Project 3.
-  link: /projects/project3.html
+# - title: Project 7
+# #   image: /path/to/project3.jpg
+#   image: /assets/images/dp1.jpg
+#   description: This is the description for Project 3.
+#   link: /projects/project3.html
   
   
-- title: Project 7
-#   image: /path/to/project3.jpg
-  image: /assets/images/dp1.jpg
-  description: This is the description for Project 3.
-  link: /projects/project3.html
+# - title: Project 7
+# #   image: /path/to/project3.jpg
+#   image: /assets/images/dp1.jpg
+#   description: This is the description for Project 3.
+#   link: /projects/project3.html
 
   
 # Add more projects as needed
