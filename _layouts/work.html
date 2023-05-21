@@ -1,4 +1,4 @@
-<!-- ---
+---
 layout: default
 title: Work
 ---
@@ -49,78 +49,6 @@ title: Work
     
     
     
-  </style>
-</head>
-<body>
-  <div class="row">
-    {% for project in site.data.projects reversed %}
-      <div class="column">
-        <a href="{{ project.url }}">
-          <div class="card">
-            <div class="thumbnail">
-              <img src="{{ project.image }}" alt="{{ project.title }}">
-            </div>
-            <h3>{{ project.title }}</h3>
-            <p>{{ project.description }}</p>
-          </div>
-        </a>
-      </div>
-    {% endfor %}
-  </div>
-</body>
-</html>
-
- -->
----
-layout: default
-title: Work
----
-
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>Work</title>
-  <style>
-    .thumbnail img {
-      width: 200px;
-      height: 200px;
-      object-fit: cover;
-    }
-
-    .row {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-
-    .column {
-      width: calc(33.33% - 10px); /* Adjust the width as per your layout */
-      margin-bottom: 20px;
-    }
-
-    .divider {
-      border-bottom: 1px dashed #ccc;
-      margin-bottom: 20px;
-    }
-
-    @media (max-width: 767px) {
-      .row {
-        justify-content: center;
-      }
-      .column {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-      }
-    }
-
-    /* Remove empty spot after the first and second project */
-    .row:before {
-      content: "";
-      width: calc(33.33% - 10px); /* Adjust the width as per your layout */
-      flex-shrink: 0;
-    }
   </style>
 </head>
 <body>
