@@ -2,6 +2,12 @@
 layout: default
 ---
 <link href="/css/override.css" rel="stylesheet" type="text/css">
+  <style>
+    .post-content1 {
+      text-align: justify;
+    }
+  </style>
+
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
@@ -21,7 +27,7 @@ layout: default
     {% include sharelinks.html %}
   </div>
 
-  <div class="post-content e-content" itemprop="articleBody">
+  <div class="post-content post-content1 e-content" itemprop="articleBody">
     {{ content }}
     {% include navlinks.html %}
   </div>
