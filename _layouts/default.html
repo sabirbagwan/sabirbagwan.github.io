@@ -24,7 +24,7 @@
 </html>
  -->
 
-
+<!-- 
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
   {%- include head.html -%}
@@ -49,6 +49,46 @@
         <h3>{{ project.title }}</h3>
         <p>{{ project.description }}</p>
         {%- endfor -%}
+      </div>
+    </main>
+
+    <div class="no-print">
+      {%- include footer.html -%}
+    </div>
+  </body>
+</html>
+ -->
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+  {%- include head.html -%}
+
+  <body>
+    <div class="no-print">
+      {%- include header.html -%}
+    </div>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <!-- Recent Blog Posts -->
+        <h2>Recent Blog Posts</h2>
+        {%- for post in site.posts limit:3 -%}
+        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+        <p>{{ post.excerpt }}</p>
+        {%- endfor -%}
+        <p><a href="/blog">See More</a></p>
+
+        <!-- Recent Projects -->
+        <h2>Recent Projects</h2>
+        {%- for project in site.projects limit:3 -%}
+        <h3><a href="{{ project.url }}">{{ project.title }}</a></h3>
+        <p>{{ project.description }}</p>
+        {%- endfor -%}
+        <p><a href="/work">See More</a></p>
       </div>
     </main>
 
