@@ -82,7 +82,7 @@ layout: default
   {% assign posts = site.posts %}
 {% endif %}
 
-{%- assign latestPosts = posts | reverse | slice: 0, 3 -%}
+{%- assign latestPosts = posts | slice: 0, 3 -%}
 
 {%- if latestPosts.size > 0 -%}
   {%- if page.list_title -%}
