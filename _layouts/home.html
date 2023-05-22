@@ -142,7 +142,7 @@ layout: default
    -->
   
   
-  <h1>Projects</h1>
+<!--   <h1>Projects</h1>
 <div class="row">
   {% for project in site.data.projects reversed limit:3 %}
     <div class="column">
@@ -163,6 +163,32 @@ layout: default
   <p><a href="/work">See More</a></p>
 {% endif %}
 
+   -->
+  
+  
+  <h1>Projects</h1>
+<div class="row">
+  {% assign latestProjects = site.data.projects | reverse | slice: 0, 3 %}
+  {% for project in latestProjects %}
+    <div class="column">
+      <a href="{{ project.url }}">
+        <div class="card">
+          <div class="thumbnail">
+            <img src="{{ project.image }}" alt="{{ project.title }}">
+          </div>
+          <h3>{{ project.title }}</h3>
+          <p>{{ project.description }}</p>
+        </div>
+      </a>
+    </div>
+  {% endfor %}
+</div>
+
+{% if site.data.projects.size > 3 %}
+  <p><a href="/work">See More</a></p>
+{% endif %}
+
+  
   
 </div>
 
