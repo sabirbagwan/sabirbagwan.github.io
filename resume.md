@@ -1,5 +1,4 @@
 ---
-layout: resume
+layout: default
 title: Resume
-<!-- permalink: /work/ -->
 ---
