@@ -7,41 +7,41 @@
 #   url: https://twitter.com/home
 
 - title: Project 2
-  image: /assets/images/dp1.jpg
+  image: /assets/images/projectthumbnail/WAGA.png
   description: This is the description for Project 2.
   link: /projects/project2.html
 
 - title: Project 3
-  image: /assets/images/dp1.jpg
+  image: /assets/images/projectthumbnail/WAGA.png
   description: This is the description for Project 3.
   link: /projects/project3.html
 
 - title: Project 4
-  image: /assets/images/dp1.jpg
+  image: /assets/images/projectthumbnail/WAGA.png
   description: This is the description for Project 3.
   link: /projects/project3.html
   
 - title: Project 5
-  image: /assets/images/dp1.jpg
+  image: /assets/images/projectthumbnail/WAGA.png
   description: This is the description for Project 3.
   link: /projects/project3.html
   
 # - title: Project 6
 # #   image: /path/to/project3.jpg
-#   image: /assets/images/dp1.jpg
+#   image: /assets/images/projectthumbnail/WAGA.png
 #   description: This is the description for Project 3.
 #   link: /projects/project3.html
 
 # - title: Project 7
 # #   image: /path/to/project3.jpg
-#   image: /assets/images/dp1.jpg
+#   image: /assets/images/projectthumbnail/WAGA.png
 #   description: This is the description for Project 3.
 #   link: /projects/project3.html
   
   
 # - title: Project 7
 # #   image: /path/to/project3.jpg
-#   image: /assets/images/dp1.jpg
+#   image: /assets/images/projectthumbnail/WAGA.png
 #   description: This is the description for Project 3.
 #   link: /projects/project3.html
 
