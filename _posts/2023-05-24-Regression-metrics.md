@@ -19,7 +19,7 @@ data.head(5).style.set_properties(**{'text-align': 'center', 'color': 'black', '
 
 ```
 
-![alt text](//assets/images/postsImages/2.RegressionMetrics/xandy.png){: style="width:200px; float:right;"}
+![alt text](/assets/images/postsImages/2.RegressionMetrics/xandy.png){: style="width:200px; float:right;"}
 
 We will see how the dataframe looks like when drawn on a chart through a scatterplot
 
@@ -30,7 +30,7 @@ plt.ylabel('y', rotation = 'horizontal', backgroundcolor = 'skyblue')
 plt.title('Randomly distributed datapoints', backgroundcolor = 'skyblue')
 plt.show()
 ```
-![alt text](//assets/images/postsImages/2.RegressionMetrics/randompoints1.png){: style="width:200px; float:right;"}
+![alt text](/assets/images/postsImages/2.RegressionMetrics/randompoints1.png){: style="width:200px; float:right;"}
 
 ```tsql
 np.random.seed(0)
@@ -54,7 +54,7 @@ plt.plot(X, y_pred, color='red', linewidth=2)
 plt.show()
 ```
 
-![alt text](//assets/images/postsImages/2.RegressionMetrics/randompoints1.png){: style="width:200px; float:right;"}
+![alt text](/assets/images/postsImages/2.RegressionMetrics/randompoints1.png){: style="width:200px; float:right;"}
 
 
 For better understanding, let's only take 10 datapoints, I know it's not much, but just for the simplicity and clear visualisation, consider that our dataset has 10 datapoints and let's draw a line of best fit on those datapoints
@@ -97,7 +97,7 @@ plt.show()
 
 ```
 
-![alt text](//assets/images/postsImages/2.RegressionMetrics/randompoints1.png){: style="width:200px; float:right;"}
+![alt text](/assets/images/postsImages/2.RegressionMetrics/randompoints1.png){: style="width:200px; float:right;"}
 
 ```tsql
 data['y_pred'] = y_pred
@@ -110,7 +110,7 @@ data.head(10).style.set_properties(**{'text-align': 'center', 'color': 'black', 
 
 ```
 
-![alt text](//assets/images/postsImages/2.RegressionMetrics/yminusypred.png){: style="width:200px; float:right;"}
+![alt text](/assets/images/postsImages/2.RegressionMetrics/yminusypred.png){: style="width:200px; float:right;"}
 
 
 
