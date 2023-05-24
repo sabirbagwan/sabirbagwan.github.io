@@ -1,15 +1,17 @@
+- title: EXIF Removal
+  image: /assets/images/projectthumbnail/exif.png
+  description: App checks and removes the EXIF data.
+  link: https://huggingface.co/spaces/sabirbagwan/ExifRemoval
+
 - title: Whatsapp Analyser
   image: /assets/images/projectthumbnail/WAGA.png
-  description: This Streamlit app give a detailed analysis of the group memebers and their contributions
+  description: App gives a detailed analysis of the group memebers and their contributions
 #   link: /projects/project1.html
 #   url: https://sabirbagwan-whatsappgroupanalysisstreamlit-app-ax04mz.streamlit.app/
   url: https://huggingface.co/spaces/sabirbagwan/WhatsappGroupAnalysis
 #   url: https://twitter.com/home
 
-- title: Project 2
-  image: /assets/images/projectthumbnail/WAGA.png
-  description: This is the description for Project 2.
-  link: /projects/project2.html
+
 
 - title: Project 3
   image: /assets/images/projectthumbnail/WAGA.png
