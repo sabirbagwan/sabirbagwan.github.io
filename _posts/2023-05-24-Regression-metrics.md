@@ -122,7 +122,9 @@ Which is nothing Buy MAE
 Mean Absolute Error (MAE):
 The MAE measures the average absolute difference between the predicted values and the actual values. It is also a good choice for continuous numerical data and is less sensitive to outliers than MSE. The formula for MAE is:
 
+$$ 
 𝑀𝐴𝐸=(1/𝑛)∗∑|𝑦𝑖−ŷ𝑖|
+$$
 
 Advantages Of MAE:
 
@@ -150,8 +152,9 @@ data.head(10).style.set_properties(**{'text-align': 'center', 'color': 'black', 
 
 ![alt text](/assets/images/postsImages/2.RegressionMetrics/yminusypredsq.png){: style="width:90%; float:centre;"}
 
-
+```tsql
 data['(y - y_pred)^2'].mean()
+```
 
 Output: 0.2765202084983117
 
@@ -160,7 +163,10 @@ Which is nothing but MSE
 Mean Squared Error (MSE):
 The MSE measures the average of the squared differences between the predicted values and the actual values. It penalizes larger errors more heavily than smaller ones, making it a good choice for continuous numerical data. The formula for MSE is:
 
+$$
 𝑀𝑆𝐸=(1/𝑛)∗∑(𝑦𝑖−ŷ𝑖)²
+$$
+
 where n is the number of samples, yi is the actual value, and ŷi is the predicted value.
 
 mean_squared_error can be used to calculate directly
