@@ -19,7 +19,7 @@ data.head(5).style.set_properties(**{'text-align': 'center', 'color': 'black', '
 
 ```
 
-![alt text](/assets/images/postsImages/2.RegressionMetrics/xandy.png){: style="width:200px; float:centre;"}
+![alt text](/assets/images/postsImages/2.RegressionMetrics/xandy.png){: style="width:70px; float:centre;"}
 
 We will see how the dataframe looks like when drawn on a chart through a scatterplot
 
@@ -30,7 +30,7 @@ plt.ylabel('y', rotation = 'horizontal', backgroundcolor = 'skyblue')
 plt.title('Randomly distributed datapoints', backgroundcolor = 'skyblue')
 plt.show()
 ```
-![alt text](/assets/images/postsImages/2.RegressionMetrics/randompoints1.png){: style="width:80%; float:centre;"}
+![alt text](/assets/images/postsImages/2.RegressionMetrics/randompoints1.png){: style="width:90%; float:centre;"}
 
 ```tsql
 np.random.seed(0)
