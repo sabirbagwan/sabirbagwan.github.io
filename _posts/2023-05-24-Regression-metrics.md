@@ -19,3 +19,4 @@ data.head(5).style.set_properties(**{'text-align': 'center', 'color': 'black', '
 
 ```
 
+![alt text](//assets/images/postsImages/2.RegressionMetrics/xandy.png){: style="width:200px; float:right;"}
