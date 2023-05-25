@@ -331,19 +331,19 @@ It gives a higher weight to larger errors, which can be problematic when the act
 It does not work well when there are extreme values or outliers in the data, as they can distort the percentage error.
 It can lead to misleading interpretations when the actual values are close to zero or the model predicts zero values
 
-Mean Percentage Error (MPE):
+# Mean Percentage Error (MPE):
 It measures the average percentage difference between predicted and actual values. The formula for MPE is:
 
 $$
 𝑀𝑃𝐸=1/𝑛∗∑(𝑦−ŷ)/𝑦
 $$
 
-Advantages of Mean Percentage Error (MPE):
+### Advantages of Mean Percentage Error (MPE):
 
 1. Provides a percentage measure of the forecast error, which is more interpretable than absolute error measures.
 2. Can be used to compare the accuracy of different forecasting methods.
 
-**Disadvantages of Mean Percentage Error (MPE):**
+### Disadvantages of Mean Percentage Error (MPE):
 
 1 .Can produce biased results if the time series has zero or negative values, since the denominator in the calculation of the percentage error would be zero or negative.
 2. Not as popular as other error measures like MAE, MSE, RMSE, and MAPE.
