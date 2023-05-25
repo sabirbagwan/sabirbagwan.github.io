@@ -261,11 +261,13 @@ $$
 & SStot is the total sum of squares.
 
 $$
-SS_{\text{tot}} = \sum_{i=1}^{n}(y_i - \hat{y})^2
+SS_{\text{tot}} = \sum_{i=1}^{n}(y_i - \bar{y})^2
 $$
 
+it can also be written as
+
 $$
-R^2 = 1 - \left(\frac{\sum_{i=1}^{n}(y_i - \hat{y}i)^2}{\sum{i=1}^{n}(y_i - \hat{y})^2}\right)
+R^2 = 1 - \left(\frac{\sum_{i=1}^{n}(y_i - \hat{y}i)^2}{\sum_{i=1}^{n}(y_i - \bar{y})^2}\right)
 $$
 
 
