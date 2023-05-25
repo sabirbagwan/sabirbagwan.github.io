@@ -24,6 +24,7 @@ data.head(5).style.set_properties(**{'text-align': 'center', 'color': 'black', '
 
 ```
 Below are the top 5 rows out of 40
+
 ![alt text](/assets/images/postsImages/2.RegressionMetrics/xandy.png){: style="width:100%; float:centre;"}
 
 We will see how the dataframe looks like when drawn on a chart through a scatterplot, the python code of which is below
