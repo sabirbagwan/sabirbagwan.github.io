@@ -301,7 +301,7 @@ $$
 $$
 
 $$
-Adjusted R^2 = 1 - \left(\frac{{n-1}}{{n-p-1}}\right) \cdot (1-R^2)
+Adjusted R^2 = 1 - \left(\frac{n-1}{n-p-1}\right) \cdot (1-R^2)
 $$
 
 
