@@ -7,7 +7,7 @@
 
 To learn about these, let's go with a Simple Linear Regression example with a simple dataset.
 X is an independent variable whereas y is a dependent variable
-View the dataframe's top 5 rows
+View the dataframe's top 5 rows. You can skip the Python code, if and wherever you want. 
 
 ```tsql
 np.random.seed(0)
@@ -98,8 +98,11 @@ for i in range(len(X)):
 plt.show()
 
 ```
-Below is how the 10 points with a best fit line looks like
+Below is what the 10 points with a best-fit line look like. The dotted lines are the distance of all the respective points from the line. The dotted line is parallel to the y-axis.
+
 ![alt text](/assets/images/postsImages/2.RegressionMetrics/randompoints.png){: style="width:100%; float:centre;"}
+
+Below is just the Python code which creates a table that calculates the difference between y and y-predictions
 
 ```tsql
 data['y_pred'] = y_pred
@@ -112,7 +115,11 @@ data.head(10).style.set_properties(**{'text-align': 'center', 'color': 'black', 
 
 ```
 
+This is how the new table looks like
+
 ![alt text](/assets/images/postsImages/2.RegressionMetrics/yminusypred.png){: style="width:100%; float:centre;"}
+
+Below is the Python code for calculating the mean of y-y_pred column.
 
 ```tsql
 data['y - y_pred'].mean() 
@@ -121,7 +128,7 @@ data['y - y_pred'].mean()
 Output: 0.47666945948143774
 
 
-Which is nothing Buy **MAE**
+Which is nothing but **MAE**
 
 ### 1. Mean Absolute Error (MAE):
 
@@ -144,7 +151,8 @@ $$
 3. MAE does not provide any information about the direction of the error (i.e., overprediction or underprediction).
 
 
-### 2. Mean Squared Error (MSE):
+
+Now, working on our table further we calculate the respective squares of the y-y_pred column and then take a mean of this entire column
 
 ```tsql
 data['(y - y_pred)^2'] = data['y - y_pred'] ** 2
@@ -166,6 +174,8 @@ Output: 0.2765202084983117
 
 Which is nothing but **MSE**
 
+### 2. Mean Squared Error (MSE):
+
 The MSE measures the average of the squared differences between the predicted values and the actual values. It penalizes larger errors more heavily than smaller ones, making it a good choice for continuous numerical data. The formula for MSE is:
 
 $$
@@ -174,13 +184,15 @@ $$
 
 where n is the number of samples, yi is the actual value, and ŷi is the predicted value.
 
-or mean_squared_error function can be used to calculate directly
+or you can use mean_squared_error function from sklearn library to calculate directly.
 
 ```tsql
+from sklearn.metrics import mean_squared_error
 mse = mean_squared_error(y, y_pred)
 print(mse)
 ```
 Output: 0.2765202084983117
+
 which is of course the same.
 
 #### Advantages:
