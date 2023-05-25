@@ -97,7 +97,7 @@ plt.show()
 
 ```
 
-![alt text](/assets/images/postsImages/2.RegressionMetrics/randompoints1.png){: style="width:90%; float:centre;"}
+![alt text](/assets/images/postsImages/2.RegressionMetrics/randompoints1.png){: style="width:100%; float:centre;"}
 
 ```tsql
 data['y_pred'] = y_pred
@@ -110,7 +110,7 @@ data.head(10).style.set_properties(**{'text-align': 'center', 'color': 'black', 
 
 ```
 
-![alt text](/assets/images/postsImages/2.RegressionMetrics/yminusypred.png){: style="width:90%; float:centre;"}
+![alt text](/assets/images/postsImages/2.RegressionMetrics/yminusypred.png){: style="width:100%; float:centre;"}
 
 
 data['y - y_pred'].mean() 
@@ -195,7 +195,9 @@ It tends to prioritize accuracy over interpretability, which may not be desirabl
 Root Mean Squared Error (RMSE):
 The RMSE is the square root of the MSE and is also a good choice for continuous numerical data. The formula for RMSE is:
 
+$$
 𝑅𝑀𝑆𝐸=𝑠𝑞𝑟𝑡((1/𝑛)∗∑(𝑦𝑖−ŷ𝑖)²)
+$$
 
 ```tsql
 rmse = mean_squared_error(y, y_pred, squared = False)
@@ -219,7 +221,10 @@ RMSE can be heavily influenced by the scale of the response variable, meaning th
 R-squared (R²):
 The R-squared value measures the proportion of variance in the dependent variable (y) that can be explained by the independent variables (X) in the model. It ranges from 0 to 1, with a higher value indicating a better fit. The formula for R-squared is:
 
+$$
 𝑅²=1−(𝑆𝑆𝑟𝑒𝑠/𝑆𝑆𝑡𝑜𝑡)
+$$
+
 where SSres is the sum of squared residuals
 
 SSres = ((y - y_pred)**2).sum()
@@ -252,7 +257,10 @@ It can be sensitive to outliers, especially when the sample size is small. In su
 Adjusted R-squared:
 The Adjusted R-squared value adjusts the R-squared value to account for the number of independent variables in the model. It penalizes models with more independent variables and can help prevent overfitting. The formula for Adjusted R-squared is:
 
+$$
 𝐴𝑑𝑗𝑢𝑠𝑡𝑒𝑑𝑅²=1−[(𝑛−1)/(𝑛−𝑝−1)]∗(1−𝑅²)
+$$
+
 where n is the number of samples and p is the number of independent variables.
 
 
@@ -273,7 +281,9 @@ It assumes that the independent variables are linearly related to the dependent 
 Mean Squared Log Error (MSLE):
 It measures the average of the squared logarithmic differences between predicted and actual values. It is useful when the target variable has a wide range of values. The formula for MSLE is:
 
+$$
 𝑀𝑆𝐿𝐸=1/𝑛∗∑(𝑙𝑜𝑔(𝑦+1)−𝑙𝑜𝑔(ŷ+1))²
+$$
 
 ```tsql
 # MSLE = mean_squared_log_error(y, y_pred)
@@ -295,7 +305,10 @@ It can be sensitive to zero values in the actual values, as the logarithm of zer
 Mean absolute percentage error (MAPE)
 The mean absolute percentage error (MAPE) is a commonly used evaluation metric in forecasting and time series analysis. It measures the average percentage deviation of the predicted values from the actual values.
 
+$$
 𝑀𝐴𝑃𝐸=(1/𝑛)∗Σ(|(𝑦𝑖−ŷ𝑖)/𝑦𝑖|)∗100
+$$
+
 where:
 
 n: number of observations
@@ -308,10 +321,10 @@ Output: 2.82017066869959
 
 Advantages:
 
-It is easy to understand and interpret, as it provides a percentage error.
-It is scale-independent, which means it can be used to compare the accuracy of models that are predicting values on different scales.
-It is widely used in forecasting and time series analysis literature, and it is therefore easy to find references for comparisons.
-Disadvantages:
+1. It is easy to understand and interpret, as it provides a percentage error.
+2. It is scale-independent, which means it can be used to compare the accuracy of models that are predicting values on different scales.
+3. It is widely used in forecasting and time series analysis literature, and it is therefore easy to find references for comparisons.
+4. Disadvantages:
 
 It has an undefined value when the actual value is zero, which can happen frequently in some applications.
 It gives a higher weight to larger errors, which can be problematic when the actual values have small magnitudes.
@@ -321,15 +334,18 @@ It can lead to misleading interpretations when the actual values are close to ze
 Mean Percentage Error (MPE):
 It measures the average percentage difference between predicted and actual values. The formula for MPE is:
 
+$$
 𝑀𝑃𝐸=1/𝑛∗∑(𝑦−ŷ)/𝑦
+$$
 
 Advantages of Mean Percentage Error (MPE):
 
-Provides a percentage measure of the forecast error, which is more interpretable than absolute error measures.
-Can be used to compare the accuracy of different forecasting methods.
-Disadvantages of Mean Percentage Error (MPE):
+1. Provides a percentage measure of the forecast error, which is more interpretable than absolute error measures.
+2. Can be used to compare the accuracy of different forecasting methods.
 
-Can produce biased results if the time series has zero or negative values, since the denominator in the calculation of the percentage error would be zero or negative.
-Not as popular as other error measures like MAE, MSE, RMSE, and MAPE.
-Does not take into account the magnitude of the errors, so it can be misleading if the errors have a wide range of values.
+**Disadvantages of Mean Percentage Error (MPE):**
+
+1 .Can produce biased results if the time series has zero or negative values, since the denominator in the calculation of the percentage error would be zero or negative.
+2. Not as popular as other error measures like MAE, MSE, RMSE, and MAPE.
+3. Does not take into account the magnitude of the errors, so it can be misleading if the errors have a wide range of values.
 
