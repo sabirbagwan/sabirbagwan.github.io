@@ -300,6 +300,11 @@ $$
 𝐴𝑑𝑗𝑢𝑠𝑡𝑒𝑑𝑅²=1−[(𝑛−1)/(𝑛−𝑝−1)]∗(1−𝑅²)
 $$
 
+$$
+Adjusted R^2 = 1 - \left(\frac{{n-1}}{{n-p-1}}\right) \cdot (1-R^2)
+$$
+
+
 where n is the number of samples and p is the number of independent variables.
 
 Below is the Python code to calculate Adjusted Rsquared via r2_score 
