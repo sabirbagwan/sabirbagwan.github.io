@@ -1,6 +1,11 @@
 **Regression performance metrics** are used to evaluate how well a regression model fits the data. These metrics measure the accuracy and goodness-of-fit of the model and can help determine how well the model can predict new, unseen data. Some common regression performance metrics include:
+1. Mean Absoulute Error (MAE)
+2. Mean Squared Error (MSE)
+3. Root Mean Squared Error (RMSE)
+4. R-squared (R^2) or Coefficient of Determination
+5. Adjusted R-squared:
 
-To learn what are the performence metrics of Linear Regression are, let's go with a Simple Linear Regression Example with a simple dataset.
+To learn about these, let's go with a Simple Linear Regression example with a simple dataset.
 X is an independent variable whereas y is a dependent variable
 View the dataframe's top 5 rows
 
@@ -18,10 +23,10 @@ data.head(5).style.set_properties(**{'text-align': 'center', 'color': 'black', '
 .applymap(lambda x: f'background-color: skyblue' if x else '')
 
 ```
-
+Below are the top 5 rows out of 40
 ![alt text](/assets/images/postsImages/2.RegressionMetrics/xandy.png){: style="width:100%; float:centre;"}
 
-We will see how the dataframe looks like when drawn on a chart through a scatterplot
+We will see how the dataframe looks like when drawn on a chart through a scatterplot, the python code of which is below
 
  ```tsql
  sns.scatterplot(data = data, x = 'X', y = 'y', color = 'darkblue')
@@ -32,6 +37,8 @@ plt.show()
 ```
 ![alt text](/assets/images/postsImages/2.RegressionMetrics/randompoints2.png){: style="width:100%; float:centre;"}
 
+
+Now we normally fit a best fit line on all the 40 points
 ```tsql
 np.random.seed(0)
 X = np.random.rand(40, 1)
@@ -53,21 +60,15 @@ plt.plot(X, y_pred, color='red', linewidth=2)
 
 plt.show()
 ```
+That's how a best fit line looks like
 
 ![alt text](/assets/images/postsImages/2.RegressionMetrics/randompoints1.png){: style="width:100%; float:centre;"}
 
 
-For better understanding, let's only take 10 datapoints, I know it's not much, but just for the simplicity and clear visualisation, consider that our dataset has 10 datapoints and let's draw a line of best fit on those datapoints
+For even better understanding, let's only take 10 datapoints, I know it's not much, but just for the simplicity and clear visualisation, consider that our dataset has 10 datapoints and let's draw a line of best fit on those datapoints
 
 ```tsql
-import numpy as np
-import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
-from sklearn.linear_model import LinearRegression
-from sklearn.metrics import mean_absolute_error
 
-# np.random.seed(0)
 X = np.random.rand(10, 1)
 y = 2 * X.squeeze() + 0.5 * np.random.randn(10)
 
@@ -96,7 +97,7 @@ for i in range(len(X)):
 plt.show()
 
 ```
-
+Below is how the 10 points with a best fit line looks like
 ![alt text](/assets/images/postsImages/2.RegressionMetrics/randompoints.png){: style="width:100%; float:centre;"}
 
 ```tsql
@@ -281,75 +282,3 @@ where n is the number of samples and p is the number of independent variables.
 
 1. It can be negative, which means that the model is worse than the baseline model (i.e., the model that predicts the mean of the dependent variable).
 2. It assumes that the independent variables are linearly related to the dependent variable and that there are no interactions between the independent variables. If these assumptions are violated, the adjusted R-squared may not be an accurate measure of model fit.
-
-### Mean Squared Log Error (MSLE):
-It measures the average of the squared logarithmic differences between predicted and actual values. It is useful when the target variable has a wide range of values. The formula for MSLE is:
-
-$$
-𝑀𝑆𝐿𝐸=1/𝑛∗∑(𝑙𝑜𝑔(𝑦+1)−𝑙𝑜𝑔(ŷ+1))²
-$$
-
-```tsql
-# MSLE = mean_squared_log_error(y, y_pred)
-# print(MSLE)
-```
-
-#### Advantages:
-
-It is a good metric to use when the target variable has a large range of values, as it scales the differences between predictions and actual values based on the log of the target variable.
-It punishes large differences between the predicted and actual values more heavily than smaller differences, which can be useful in certain applications.
-It is less sensitive to outliers than mean squared error (MSE), which can make it a better metric to use when the dataset contains outliers.
-
-#### Disadvantages:
-
-1. It is not interpretable in the same way as other metrics such as mean absolute error (MAE) or R-squared, which can make it difficult to explain to non-technical stakeholders.
-2. It can be difficult to compare MSLE scores across different datasets, as the metric depends on the scale of the target variable.
-3. It can be sensitive to zero values in the actual values, as the logarithm of zero is undefined. This can be addressed by adding a small constant to the actual values before calculating the metric.
-
-
-### Mean absolute percentage error (MAPE)
-The mean absolute percentage error (MAPE) is a commonly used evaluation metric in forecasting and time series analysis. It measures the average percentage deviation of the predicted values from the actual values.
-
-$$
-𝑀𝐴𝑃𝐸=(1/𝑛)∗Σ(|(𝑦𝑖−ŷ𝑖)/𝑦𝑖|)∗100
-$$
-
-where n: number of observations
-
-```tsql
-MAPE = mean_absolute_percentage_error(y, y_pred)
-print(MAPE)
-```
-Output: 2.82017066869959
-
-#### Advantages:
-
-1. It is easy to understand and interpret, as it provides a percentage error.
-2. It is scale-independent, which means it can be used to compare the accuracy of models that are predicting values on different scales.
-3. It is widely used in forecasting and time series analysis literature, and it is therefore easy to find references for comparisons.
-
-#### Disadvantages:
-
-1. It has an undefined value when the actual value is zero, which can happen frequently in some applications.
-2. It gives a higher weight to larger errors, which can be problematic when the actual values have small magnitudes.
-3. It does not work well when there are extreme values or outliers in the data, as they can distort the percentage error. 
-4. It can lead to misleading interpretations when the actual values are close to zero or the model predicts zero values
-
-### Mean Percentage Error (MPE):
-It measures the average percentage difference between predicted and actual values. The formula for MPE is:
-
-$$
-𝑀𝑃𝐸=1/𝑛∗∑(𝑦−ŷ)/𝑦
-$$
-
-#### Advantages:
-
-1. Provides a percentage measure of the forecast error, which is more interpretable than absolute error measures.
-2. Can be used to compare the accuracy of different forecasting methods.
-
-#### Disadvantages:
-
-1. Can produce biased results if the time series has zero or negative values, since the denominator in the calculation of the percentage error would be zero or negative.
-2. Not as popular as other error measures like MAE, MSE, RMSE, and MAPE.
-3. Does not take into account the magnitude of the errors, so it can be misleading if the errors have a wide range of values.
-
