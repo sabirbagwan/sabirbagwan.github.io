@@ -30,7 +30,7 @@ plt.ylabel('y', rotation = 'horizontal', backgroundcolor = 'skyblue')
 plt.title('Randomly distributed datapoints', backgroundcolor = 'skyblue')
 plt.show()
 ```
-![alt text](/assets/images/postsImages/2.RegressionMetrics/randompoints1.png){: style="width:100%; float:centre;"}
+![alt text](/assets/images/postsImages/2.RegressionMetrics/randompoints2.png){: style="width:100%; float:centre;"}
 
 ```tsql
 np.random.seed(0)
@@ -97,7 +97,7 @@ plt.show()
 
 ```
 
-![alt text](/assets/images/postsImages/2.RegressionMetrics/randompoints1.png){: style="width:100%; float:centre;"}
+![alt text](/assets/images/postsImages/2.RegressionMetrics/randompoints.png){: style="width:100%; float:centre;"}
 
 ```tsql
 data['y_pred'] = y_pred
