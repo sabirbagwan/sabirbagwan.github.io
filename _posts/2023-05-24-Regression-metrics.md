@@ -270,9 +270,10 @@ $$
 R^2 = 1 - \left(\frac{\sum_{i=1}^{n}(y_i - \hat{y}i)^2}{\sum_{i=1}^{n}(y_i - \bar{y})^2}\right)
 $$
 
-
+Or you could import r2_score from sklearn.metrics in Python and calculate directly
 
 ```tsql
+from sklearn.metrics import r2_score
 R2 = r2_score(y, y_pred)
 print(R2)
 ```
@@ -301,9 +302,12 @@ $$
 
 where n is the number of samples and p is the number of independent variables.
 
+Below is the Python code to calculate Adjusted Rsquared via r2_score 
+
 ```tsql
-# Adj_r2 = 1-(1-R2)*(n-1)/(n-p-1)
-# print(Adj_r2)
+from sklearn.metrics import r2_score
+R2 = r2_score(actual, predicted)
+Adj_r2 = 1-(1-R2)*(n-1)/(n-p-1)
 ```
 
 #### Advantages:
