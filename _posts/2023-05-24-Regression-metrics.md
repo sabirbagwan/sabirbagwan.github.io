@@ -331,7 +331,7 @@ It gives a higher weight to larger errors, which can be problematic when the act
 It does not work well when there are extreme values or outliers in the data, as they can distort the percentage error.
 It can lead to misleading interpretations when the actual values are close to zero or the model predicts zero values
 
-# Mean Percentage Error (MPE):
+## Mean Percentage Error (MPE):
 It measures the average percentage difference between predicted and actual values. The formula for MPE is:
 
 $$
@@ -345,7 +345,7 @@ $$
 
 ### Disadvantages of Mean Percentage Error (MPE):
 
-1 .Can produce biased results if the time series has zero or negative values, since the denominator in the calculation of the percentage error would be zero or negative.
+1. Can produce biased results if the time series has zero or negative values, since the denominator in the calculation of the percentage error would be zero or negative.
 2. Not as popular as other error measures like MAE, MSE, RMSE, and MAPE.
 3. Does not take into account the magnitude of the errors, so it can be misleading if the errors have a wide range of values.
 
