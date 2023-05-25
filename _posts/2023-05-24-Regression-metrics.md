@@ -261,7 +261,7 @@ $$
 & SStot is the total sum of squares.
 
 $$
-SS_{\text{tot}} = \sum_{i=1}^{n}(y_i - \bar{y})^2
+SS_{\text{tot}} = \sum_{i=1}^{n}(y_i - \hat{y})^2
 $$
 
 ```tsql
