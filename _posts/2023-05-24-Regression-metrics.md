@@ -282,7 +282,8 @@ where n is the number of samples and p is the number of independent variables.
 
 1. It can be negative, which means that the model is worse than the baseline model (i.e., the model that predicts the mean of the dependent variable).
 2. It assumes that the independent variables are linearly related to the dependent variable and that there are no interactions between the independent variables. If these assumptions are violated, the adjusted R-squared may not be an accurate measure of model fit.
-
-
-
-
+<br>
+<br>
+<br>
+<br>
+<br>
