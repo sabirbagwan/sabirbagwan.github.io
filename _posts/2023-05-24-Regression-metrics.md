@@ -297,10 +297,6 @@ Output: 0.28998880211940314
 The Adjusted R-squared value adjusts the R-squared value to account for the number of independent variables in the model. It penalizes models with more independent variables and can help prevent overfitting. The formula for Adjusted R-squared is:
 
 $$
-𝐴𝑑𝑗𝑢𝑠𝑡𝑒𝑑𝑅²=1−[(𝑛−1)/(𝑛−𝑝−1)]∗(1−𝑅²)
-$$
-
-$$
 Adjusted R^2 = 1 - \left(\frac{n-1}{n-p-1}\right) \cdot (1-R^2)
 $$
 
