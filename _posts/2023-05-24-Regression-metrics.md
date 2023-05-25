@@ -1,4 +1,4 @@
-Regression performance metrics are used to evaluate how well a regression model fits the data. These metrics measure the accuracy and goodness-of-fit of the model and can help determine how well the model can predict new, unseen data. Some common regression performance metrics include:
+**Regression performance metrics** are used to evaluate how well a regression model fits the data. These metrics measure the accuracy and goodness-of-fit of the model and can help determine how well the model can predict new, unseen data. Some common regression performance metrics include:
 
 To learn what are the performence metrics of Linear Regression are, let's go with a Simple Linear Regression Example with a simple dataset.
 X is an independent variable whereas y is a dependent variable
@@ -119,26 +119,28 @@ Output: 0.47666945948143774
 
 Which is nothing Buy MAE
 
-Mean Absolute Error (MAE):
+### Mean Absolute Error (MAE):
+
 The MAE measures the average absolute difference between the predicted values and the actual values. It is also a good choice for continuous numerical data and is less sensitive to outliers than MSE. The formula for MAE is:
 
 $$ 
 𝑀𝐴𝐸=(1/𝑛)∗∑|𝑦𝑖−ŷ𝑖|
 $$
 
-Advantages Of MAE:
+#### Advantages Of MAE:
 
-MAE is easy to understand and interpret since it represents the average magnitude of errors.
-Unlike the mean squared error (MSE), MAE does not heavily penalize large errors and is more robust to outliers.
-MAE is a good choice when the target variable has a linear relationship with the predictors.
-Disadvantages:
+1. MAE is easy to understand and interpret since it represents the average magnitude of errors.
+2. Unlike the mean squared error (MSE), MAE does not heavily penalize large errors and is more robust to outliers.
+3. MAE is a good choice when the target variable has a linear relationship with the predictors.
 
-Since MAE does not heavily penalize large errors, it may not be the best metric to use when the goal is to minimize the maximum error (i.e., minimize the worst-case scenario).
-In some cases, the absolute difference may not be an appropriate measure of the error. For example, if the predicted and actual values are both negative but with different magnitudes, the MAE may not accurately represent the error.
-MAE does not provide any information about the direction of the error (i.e., overprediction or underprediction).
+#### Disadvantages:
+
+1. Since MAE does not heavily penalize large errors, it may not be the best metric to use when the goal is to minimize the maximum error (i.e., minimize the worst-case scenario).
+2. In some cases, the absolute difference may not be an appropriate measure of the error. For example, if the predicted and actual values are both negative but with different magnitudes, the MAE may not accurately represent the error.
+3. MAE does not provide any information about the direction of the error (i.e., overprediction or underprediction).
 
 
-Mean Squared Error
+### Mean Squared Error
 
 ```tsql
 data['(y - y_pred)^2'] = data['y - y_pred'] ** 2
@@ -160,7 +162,7 @@ Output: 0.2765202084983117
 
 Which is nothing but MSE
 
-Mean Squared Error (MSE):
+### Mean Squared Error (MSE):
 The MSE measures the average of the squared differences between the predicted values and the actual values. It penalizes larger errors more heavily than smaller ones, making it a good choice for continuous numerical data. The formula for MSE is:
 
 $$
@@ -177,22 +179,22 @@ print(mse)
 ```
 Output: 0.2765202084983117
 
-Below are some Advantages and Disadvantages of Mean Squared Error
 
-Advantages:
+#### Advantages:
 
-It penalizes larger errors more heavily than smaller errors due to the squaring operation.
-It is a differentiable and convex function, which makes it easier to optimize using numerical methods.
-It is widely used in many applications and is a standard metric for regression models.
-It provides a measure of variance in addition to the measure of bias provided by the squared bias.
-Disadvantages:
+1. It penalizes larger errors more heavily than smaller errors due to the squaring operation.
+2. It is a differentiable and convex function, which makes it easier to optimize using numerical methods.
+3. It is widely used in many applications and is a standard metric for regression models.
+4. It provides a measure of variance in addition to the measure of bias provided by the squared bias.
 
-It is highly sensitive to outliers because of the squaring operation, which can result in a large increase in the error for a single outlier.
-It is not in the same units as the original target variable, which makes it difficult to interpret the error in a meaningful way.
-It can be heavily influenced by large errors, which may not be representative of the overall performance of the model.
-It tends to prioritize accuracy over interpretability, which may not be desirable in some applications.
+#### Disadvantages:
 
-Root Mean Squared Error (RMSE):
+1. It is highly sensitive to outliers because of the squaring operation, which can result in a large increase in the error for a single outlier.
+2. It is not in the same units as the original target variable, which makes it difficult to interpret the error in a meaningful way.
+3. It can be heavily influenced by large errors, which may not be representative of the overall performance of the model.
+4. It tends to prioritize accuracy over interpretability, which may not be desirable in some applications.
+
+### Root Mean Squared Error (RMSE):
 The RMSE is the square root of the MSE and is also a good choice for continuous numerical data. The formula for RMSE is:
 
 $$
@@ -207,18 +209,19 @@ Output: 0.5258518883662125
 
 Below are some Advantages and Disadvantages of Root Mean Squared Error
 
-Advantages:
+#### Advantages:
 
-RMSE is widely used and is easily interpretable, making it useful for communicating model performance to non-technical stakeholders.
-It provides a measure of the magnitude of errors in the same units as the response variable, which makes it easier to understand how large the errors are.
-It punishes larger errors more than smaller errors, which can be useful in situations where larger errors are more important to avoid.
-Disadvantages:
+1. RMSE is widely used and is easily interpretable, making it useful for communicating model performance to non-technical stakeholders.
+2. It provides a measure of the magnitude of errors in the same units as the response variable, which makes it easier to understand how large the errors are.
+3. It punishes larger errors more than smaller errors, which can be useful in situations where larger errors are more important to avoid.
 
-RMSE is sensitive to outliers, meaning that a few large errors can significantly increase the value of RMSE and make it difficult to interpret.
-Because RMSE involves taking the square root of the average squared error, it is more difficult to compute than simpler metrics like MAE.
-RMSE can be heavily influenced by the scale of the response variable, meaning that comparisons across different response variables may not be meaningful.
+#### Disadvantages:
 
-R-squared (R²):
+1. RMSE is sensitive to outliers, meaning that a few large errors can significantly increase the value of RMSE and make it difficult to interpret.
+2. Because RMSE involves taking the square root of the average squared error, it is more difficult to compute than simpler metrics like MAE.
+3. RMSE can be heavily influenced by the scale of the response variable, meaning that comparisons across different response variables may not be meaningful.
+
+### R-squared (R²):
 The R-squared value measures the proportion of variance in the dependent variable (y) that can be explained by the independent variables (X) in the model. It ranges from 0 to 1, with a higher value indicating a better fit. The formula for R-squared is:
 
 $$
@@ -240,21 +243,20 @@ print(R2)
 Output: 0.28998880211940314
 
 
-Below are some Advantages and Disadvantages of R-squared:
+#### Advantages:
 
-Advantages:
+1. It provides a simple and straightforward way to evaluate the goodness of fit of a regression model.
+2. It ranges from 0 to 1, where a value of 1 indicates a perfect fit and a value of 0 indicates that the model does not explain any of the variance in the dependent variable.
+3. It is widely used in practice and easily interpretable.
 
-It provides a simple and straightforward way to evaluate the goodness of fit of a regression model.
-It ranges from 0 to 1, where a value of 1 indicates a perfect fit and a value of 0 indicates that the model does not explain any of the variance in the dependent variable.
-It is widely used in practice and easily interpretable.
-Disadvantages:
+#### Disadvantages:
 
-It can be misleading when used with models that have low degrees of freedom or when the relationship between the independent and dependent variables is non-linear.
-It does not indicate whether the independent variables are causally related to the dependent variable or whether they are merely correlated.
-It can be sensitive to outliers, especially when the sample size is small. In such cases, the adjusted R-squared metric is often preferred.
+1. It can be misleading when used with models that have low degrees of freedom or when the relationship between the independent and dependent variables is non-linear.
+2. It does not indicate whether the independent variables are causally related to the dependent variable or whether they are merely correlated.
+3. It can be sensitive to outliers, especially when the sample size is small. In such cases, the adjusted R-squared metric is often preferred.
 
 
-Adjusted R-squared:
+### Adjusted R-squared:
 The Adjusted R-squared value adjusts the R-squared value to account for the number of independent variables in the model. It penalizes models with more independent variables and can help prevent overfitting. The formula for Adjusted R-squared is:
 
 $$
@@ -269,16 +271,17 @@ where n is the number of samples and p is the number of independent variables.
 # print(Adj_r2)
 ```
 
-Advantages of adjusted R-squared:
+#### Advantages of adjusted R-squared:
 
-It is a useful tool for comparing models with different numbers of independent variables, as it adjusts for the number of independent variables used in the model.
-It provides a more accurate representation of the goodness of fit of the model than the R-squared value alone.
-Disadvantages of adjusted R-squared:
+1. It is a useful tool for comparing models with different numbers of independent variables, as it adjusts for the number of independent variables used in the model.
+2. It provides a more accurate representation of the goodness of fit of the model than the R-squared value alone.
 
-It can be negative, which means that the model is worse than the baseline model (i.e., the model that predicts the mean of the dependent variable).
-It assumes that the independent variables are linearly related to the dependent variable and that there are no interactions between the independent variables. If these assumptions are violated, the adjusted R-squared may not be an accurate measure of model fit.
+#### Disadvantages of adjusted R-squared:
 
-Mean Squared Log Error (MSLE):
+1. It can be negative, which means that the model is worse than the baseline model (i.e., the model that predicts the mean of the dependent variable).
+2. It assumes that the independent variables are linearly related to the dependent variable and that there are no interactions between the independent variables. If these assumptions are violated, the adjusted R-squared may not be an accurate measure of model fit.
+
+### Mean Squared Log Error (MSLE):
 It measures the average of the squared logarithmic differences between predicted and actual values. It is useful when the target variable has a wide range of values. The formula for MSLE is:
 
 $$
@@ -290,28 +293,27 @@ $$
 # print(MSLE)
 ```
 
-Advantages:
+#### Advantages:
 
 It is a good metric to use when the target variable has a large range of values, as it scales the differences between predictions and actual values based on the log of the target variable.
 It punishes large differences between the predicted and actual values more heavily than smaller differences, which can be useful in certain applications.
 It is less sensitive to outliers than mean squared error (MSE), which can make it a better metric to use when the dataset contains outliers.
-Disadvantages:
 
-It is not interpretable in the same way as other metrics such as mean absolute error (MAE) or R-squared, which can make it difficult to explain to non-technical stakeholders.
-It can be difficult to compare MSLE scores across different datasets, as the metric depends on the scale of the target variable.
-It can be sensitive to zero values in the actual values, as the logarithm of zero is undefined. This can be addressed by adding a small constant to the actual values before calculating the metric.
+#### Disadvantages:
+
+1. It is not interpretable in the same way as other metrics such as mean absolute error (MAE) or R-squared, which can make it difficult to explain to non-technical stakeholders.
+2. It can be difficult to compare MSLE scores across different datasets, as the metric depends on the scale of the target variable.
+3. It can be sensitive to zero values in the actual values, as the logarithm of zero is undefined. This can be addressed by adding a small constant to the actual values before calculating the metric.
 
 
-Mean absolute percentage error (MAPE)
+### Mean absolute percentage error (MAPE)
 The mean absolute percentage error (MAPE) is a commonly used evaluation metric in forecasting and time series analysis. It measures the average percentage deviation of the predicted values from the actual values.
 
 $$
 𝑀𝐴𝑃𝐸=(1/𝑛)∗Σ(|(𝑦𝑖−ŷ𝑖)/𝑦𝑖|)∗100
 $$
 
-where:
-
-n: number of observations
+where n: number of observations
 
 ```tsql
 MAPE = mean_absolute_percentage_error(y, y_pred)
@@ -319,17 +321,18 @@ print(MAPE)
 ```
 Output: 2.82017066869959
 
-Advantages:
+#### Advantages:
 
 1. It is easy to understand and interpret, as it provides a percentage error.
 2. It is scale-independent, which means it can be used to compare the accuracy of models that are predicting values on different scales.
 3. It is widely used in forecasting and time series analysis literature, and it is therefore easy to find references for comparisons.
-4. Disadvantages:
 
-It has an undefined value when the actual value is zero, which can happen frequently in some applications.
-It gives a higher weight to larger errors, which can be problematic when the actual values have small magnitudes.
-It does not work well when there are extreme values or outliers in the data, as they can distort the percentage error.
-It can lead to misleading interpretations when the actual values are close to zero or the model predicts zero values
+#### Disadvantages:
+
+1. It has an undefined value when the actual value is zero, which can happen frequently in some applications.
+2. It gives a higher weight to larger errors, which can be problematic when the actual values have small magnitudes.
+3. It does not work well when there are extreme values or outliers in the data, as they can distort the percentage error. 
+4. It can lead to misleading interpretations when the actual values are close to zero or the model predicts zero values
 
 ### Mean Percentage Error (MPE):
 It measures the average percentage difference between predicted and actual values. The formula for MPE is:
