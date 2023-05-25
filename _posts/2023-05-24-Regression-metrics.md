@@ -201,13 +201,13 @@ which is of course the same.
 ### 3. Root Mean Squared Error (RMSE):
 The RMSE is the square root of the MSE and is also a good choice for continuous numerical data. The formula for RMSE is:
 
-$$
+<!-- $$
 𝑅𝑀𝑆𝐸=𝑠𝑞𝑟𝑡((1/𝑛)∗∑(𝑦𝑖−ŷ𝑖)²)
 $$
 
 <br>
 <br>
-
+ -->
 $$
 𝑅𝑀𝑆𝐸 = \sqrt{1/n{\sum{(𝑦𝑖−ŷ𝑖)²}}}
 $$
