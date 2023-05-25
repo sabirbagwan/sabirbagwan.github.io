@@ -254,18 +254,14 @@ $$
 where SSres is the sum of squared residuals
 
 $$
-SSres = ((y - y_pred)**2).sum()
-$$
-
-$$
-$SS_{\text{res}} = \sum_{i=1}^{n}(y_i - \hat{y}_i)^2$
+SS_{\text{res}} = \sum_{i=1}^{n}(y_i - \hat{y}_i)^2
 $$
 
 
 & SStot is the total sum of squares.
 
 $$
-SStot = ((y - y.mean())**2).sum()
+SS_{\text{tot}} = \sum_{i=1}^{n}(y_i - \bar{y})^2
 $$
 
 ```tsql
