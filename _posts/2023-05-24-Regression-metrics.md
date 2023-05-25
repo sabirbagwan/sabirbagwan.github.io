@@ -122,7 +122,7 @@ Output: 0.47666945948143774
 
 Which is nothing Buy **MAE**
 
-### Mean Absolute Error (MAE):
+### 1. Mean Absolute Error (MAE):
 
 The MAE measures the average absolute difference between the predicted values and the actual values. It is also a good choice for continuous numerical data and is less sensitive to outliers than MSE. The formula for MAE is:
 
@@ -143,7 +143,7 @@ $$
 3. MAE does not provide any information about the direction of the error (i.e., overprediction or underprediction).
 
 
-### Mean Squared Error
+### 2. Mean Squared Error (MSE):
 
 ```tsql
 data['(y - y_pred)^2'] = data['y - y_pred'] ** 2
@@ -165,7 +165,6 @@ Output: 0.2765202084983117
 
 Which is nothing but **MSE**
 
-### Mean Squared Error (MSE):
 The MSE measures the average of the squared differences between the predicted values and the actual values. It penalizes larger errors more heavily than smaller ones, making it a good choice for continuous numerical data. The formula for MSE is:
 
 $$
@@ -198,7 +197,7 @@ which is of course the same.
 4. It tends to prioritize accuracy over interpretability, which may not be desirable in some applications.
 
 
-### Root Mean Squared Error (RMSE):
+### 3. Root Mean Squared Error (RMSE):
 The RMSE is the square root of the MSE and is also a good choice for continuous numerical data. The formula for RMSE is:
 
 $$
@@ -224,7 +223,7 @@ Output: 0.5258518883662125
 2. Because RMSE involves taking the square root of the average squared error, it is more difficult to compute than simpler metrics like MAE.
 3. RMSE can be heavily influenced by the scale of the response variable, meaning that comparisons across different response variables may not be meaningful.
 
-### R-squared (R²):
+### 4. R-squared (R²):
 The R-squared value measures the proportion of variance in the dependent variable (y) that can be explained by the independent variables (X) in the model. It ranges from 0 to 1, with a higher value indicating a better fit. The formula for R-squared is:
 
 $$
@@ -259,7 +258,7 @@ Output: 0.28998880211940314
 3. It can be sensitive to outliers, especially when the sample size is small. In such cases, the adjusted R-squared metric is often preferred.
 
 
-### Adjusted R-squared:
+### 5. Adjusted R-squared:
 The Adjusted R-squared value adjusts the R-squared value to account for the number of independent variables in the model. It penalizes models with more independent variables and can help prevent overfitting. The formula for Adjusted R-squared is:
 
 $$
@@ -282,8 +281,6 @@ where n is the number of samples and p is the number of independent variables.
 
 1. It can be negative, which means that the model is worse than the baseline model (i.e., the model that predicts the mean of the dependent variable).
 2. It assumes that the independent variables are linearly related to the dependent variable and that there are no interactions between the independent variables. If these assumptions are violated, the adjusted R-squared may not be an accurate measure of model fit.
-<br>
-<br>
 <br>
 <br>
 <br>
