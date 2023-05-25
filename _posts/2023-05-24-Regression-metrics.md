@@ -207,7 +207,7 @@ $$
 
 
 $$
-𝑅𝑀𝑆𝐸 = \root{n}{\sum{(𝑦𝑖−ŷ𝑖)²}}
+𝑅𝑀𝑆𝐸 = \sqrt{n}{\sum{(𝑦𝑖−ŷ𝑖)²}}
 $$
 ```tsql
 rmse = mean_squared_error(y, y_pred, squared = False)
