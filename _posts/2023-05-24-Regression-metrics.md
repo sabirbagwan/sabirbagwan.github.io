@@ -257,6 +257,11 @@ $$
 SSres = ((y - y_pred)**2).sum()
 $$
 
+$$
+$SS_{\text{res}} = \sum_{i=1}^{n}(y_i - \hat{y}_i)^2$
+$$
+
+
 & SStot is the total sum of squares.
 
 $$
