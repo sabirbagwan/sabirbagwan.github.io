@@ -19,7 +19,7 @@ data.head(5).style.set_properties(**{'text-align': 'center', 'color': 'black', '
 
 ```
 
-![alt text](/assets/images/postsImages/2.RegressionMetrics/xandy.png){: style="width:70%; float:centre;"}
+![alt text](/assets/images/postsImages/2.RegressionMetrics/xandy.png){: style="width:100%; float:centre;"}
 
 We will see how the dataframe looks like when drawn on a chart through a scatterplot
 
@@ -30,7 +30,7 @@ plt.ylabel('y', rotation = 'horizontal', backgroundcolor = 'skyblue')
 plt.title('Randomly distributed datapoints', backgroundcolor = 'skyblue')
 plt.show()
 ```
-![alt text](/assets/images/postsImages/2.RegressionMetrics/randompoints1.png){: style="width:90%; float:centre;"}
+![alt text](/assets/images/postsImages/2.RegressionMetrics/randompoints1.png){: style="width:100%; float:centre;"}
 
 ```tsql
 np.random.seed(0)
@@ -54,7 +54,7 @@ plt.plot(X, y_pred, color='red', linewidth=2)
 plt.show()
 ```
 
-![alt text](/assets/images/postsImages/2.RegressionMetrics/randompoints1.png){: style="width:90%; float:centre;"}
+![alt text](/assets/images/postsImages/2.RegressionMetrics/randompoints1.png){: style="width:100%; float:centre;"}
 
 
 For better understanding, let's only take 10 datapoints, I know it's not much, but just for the simplicity and clear visualisation, consider that our dataset has 10 datapoints and let's draw a line of best fit on those datapoints
@@ -112,12 +112,14 @@ data.head(10).style.set_properties(**{'text-align': 'center', 'color': 'black', 
 
 ![alt text](/assets/images/postsImages/2.RegressionMetrics/yminusypred.png){: style="width:100%; float:centre;"}
 
-
+```tsql
 data['y - y_pred'].mean() 
+```
 
 Output: 0.47666945948143774
 
-Which is nothing Buy MAE
+
+Which is nothing Buy **MAE**
 
 ### Mean Absolute Error (MAE):
 
@@ -152,7 +154,7 @@ data.head(10).style.set_properties(**{'text-align': 'center', 'color': 'black', 
 
 ```
 
-![alt text](/assets/images/postsImages/2.RegressionMetrics/yminusypredsq.png){: style="width:90%; float:centre;"}
+![alt text](/assets/images/postsImages/2.RegressionMetrics/yminusypredsq.png){: style="width:100%; float:centre;"}
 
 ```tsql
 data['(y - y_pred)^2'].mean()
@@ -160,7 +162,7 @@ data['(y - y_pred)^2'].mean()
 
 Output: 0.2765202084983117
 
-Which is nothing but MSE
+Which is nothing but **MSE**
 
 ### Mean Squared Error (MSE):
 The MSE measures the average of the squared differences between the predicted values and the actual values. It penalizes larger errors more heavily than smaller ones, making it a good choice for continuous numerical data. The formula for MSE is:
@@ -171,14 +173,14 @@ $$
 
 where n is the number of samples, yi is the actual value, and ŷi is the predicted value.
 
-mean_squared_error can be used to calculate directly
+or mean_squared_error function can be used to calculate directly
 
 ```tsql
 mse = mean_squared_error(y, y_pred)
 print(mse)
 ```
 Output: 0.2765202084983117
-
+which is of course the same.
 
 #### Advantages:
 
@@ -194,6 +196,7 @@ Output: 0.2765202084983117
 3. It can be heavily influenced by large errors, which may not be representative of the overall performance of the model.
 4. It tends to prioritize accuracy over interpretability, which may not be desirable in some applications.
 
+
 ### Root Mean Squared Error (RMSE):
 The RMSE is the square root of the MSE and is also a good choice for continuous numerical data. The formula for RMSE is:
 
@@ -207,7 +210,6 @@ print(rmse)
 ```
 Output: 0.5258518883662125
 
-Below are some Advantages and Disadvantages of Root Mean Squared Error
 
 #### Advantages:
 
@@ -265,18 +267,17 @@ $$
 
 where n is the number of samples and p is the number of independent variables.
 
-
 ```tsql
 # Adj_r2 = 1-(1-R2)*(n-1)/(n-p-1)
 # print(Adj_r2)
 ```
 
-#### Advantages of adjusted R-squared:
+#### Advantages:
 
 1. It is a useful tool for comparing models with different numbers of independent variables, as it adjusts for the number of independent variables used in the model.
 2. It provides a more accurate representation of the goodness of fit of the model than the R-squared value alone.
 
-#### Disadvantages of adjusted R-squared:
+#### Disadvantages:
 
 1. It can be negative, which means that the model is worse than the baseline model (i.e., the model that predicts the mean of the dependent variable).
 2. It assumes that the independent variables are linearly related to the dependent variable and that there are no interactions between the independent variables. If these assumptions are violated, the adjusted R-squared may not be an accurate measure of model fit.
@@ -341,12 +342,12 @@ $$
 𝑀𝑃𝐸=1/𝑛∗∑(𝑦−ŷ)/𝑦
 $$
 
-#### Advantages of Mean Percentage Error (MPE):
+#### Advantages:
 
 1. Provides a percentage measure of the forecast error, which is more interpretable than absolute error measures.
 2. Can be used to compare the accuracy of different forecasting methods.
 
-#### Disadvantages of Mean Percentage Error (MPE):
+#### Disadvantages:
 
 1. Can produce biased results if the time series has zero or negative values, since the denominator in the calculation of the percentage error would be zero or negative.
 2. Not as popular as other error measures like MAE, MSE, RMSE, and MAPE.
