@@ -253,11 +253,15 @@ $$
 
 where SSres is the sum of squared residuals
 
+$$
 SSres = ((y - y_pred)**2).sum()
+$$
 
 & SStot is the total sum of squares.
 
+$$
 SStot = ((y - y.mean())**2).sum()
+$$
 
 ```tsql
 R2 = r2_score(y, y_pred)
