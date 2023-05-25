@@ -264,6 +264,12 @@ $$
 SS_{\text{tot}} = \sum_{i=1}^{n}(y_i - \hat{y})^2
 $$
 
+$$
+R^2 = 1 - \left(\frac{\sum_{i=1}^{n}(y_i - \hat{y}i)^2}{\sum{i=1}^{n}(y_i - \hat{y})^2}\right)
+$$
+
+
+
 ```tsql
 R2 = r2_score(y, y_pred)
 print(R2)
