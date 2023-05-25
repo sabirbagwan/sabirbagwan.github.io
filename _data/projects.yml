@@ -1,3 +1,8 @@
+- title: Text Summarisation
+  image: /assets/images/projectthumbnail/ts.png
+  description: App summarizes the long text into short one.
+  link: https://huggingface.co/spaces/sabirbagwan/Text_summary
+
 - title: EXIF Removal
   image: /assets/images/projectthumbnail/exif.png
   description: App checks and removes the EXIF data.
@@ -6,17 +11,7 @@
 - title: Whatsapp Analyser
   image: /assets/images/projectthumbnail/WAGA.png
   description: App gives a detailed analysis of the group memebers and their contributions
-#   link: /projects/project1.html
-#   url: https://sabirbagwan-whatsappgroupanalysisstreamlit-app-ax04mz.streamlit.app/
   url: https://huggingface.co/spaces/sabirbagwan/WhatsappGroupAnalysis
-#   url: https://twitter.com/home
-
-
-
-- title: Project 3
-  image: /assets/images/projectthumbnail/WAGA.png
-  description: This is the description for Project 3.
-  link: /projects/project3.html
 
 - title: Project 4
   image: /assets/images/projectthumbnail/WAGA.png
