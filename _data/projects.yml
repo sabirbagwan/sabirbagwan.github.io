@@ -1,3 +1,8 @@
+- title: SIP calculation
+  image: /assets/images/projectthumbnail/sip.png
+  description: App gives the analysis of SIP.
+  link: https://huggingface.co/spaces/sabirbagwan/Sip
+
 - title: Text Summarisation
   image: /assets/images/projectthumbnail/tsa.png
   description: App summarizes the long text into short one.
@@ -13,10 +18,7 @@
   description: App gives a detailed analysis of the group memebers and their contributions
   url: https://huggingface.co/spaces/sabirbagwan/WhatsappGroupAnalysis
 
-- title: Project 4
-  image: /assets/images/projectthumbnail/WAGA.png
-  description: This is the description for Project 3.
-  link: /projects/project3.html
+
   
 - title: Project 5
   image: /assets/images/projectthumbnail/WAGA.png
