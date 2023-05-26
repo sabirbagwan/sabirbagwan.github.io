@@ -1,17 +1,17 @@
 - title: SIP calculation
   image: /assets/images/projectthumbnail/sip.png
   description: App gives the analysis of SIP.
-  link: https://huggingface.co/spaces/sabirbagwan/Sip
+  url: https://huggingface.co/spaces/sabirbagwan/Sip
 
 - title: Text Summarisation
   image: /assets/images/projectthumbnail/tsa.png
   description: App summarizes the long text into short one.
-  link: https://huggingface.co/spaces/sabirbagwan/Text_summary
+  url: https://huggingface.co/spaces/sabirbagwan/Text_summary
 
 - title: EXIF Removal
   image: /assets/images/projectthumbnail/erl.png
   description: App checks and removes the EXIF data.
-  link: https://huggingface.co/spaces/sabirbagwan/ExifRemoval
+  url: https://huggingface.co/spaces/sabirbagwan/ExifRemoval
 
 - title: Whatsapp Analyser
   image: /assets/images/projectthumbnail/wag.png
