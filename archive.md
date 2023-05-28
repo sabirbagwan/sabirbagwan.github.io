@@ -16,10 +16,20 @@ title: Blogs
  -->
 
 
+<style>
+.search-input {
+  width: 300px;
+  height: 30px;
+}
+</style>
+
+
 {% for tag in site.tags %}
   <!-- <h3>{{ tag[0] }}</h3> -->
   <h3>All Blogs</h3>
-  <input type="text" id="search-input" placeholder="Search by title" onkeyup="searchBlogs()">
+<!--   <input type="text" id="search-input" placeholder="Search by title" onkeyup="searchBlogs()"> -->
+  <input type="text" id="search-input" class="search-input" placeholder="Search by title or date" onkeyup="searchBlogs()">
+
   <ul id="blog-list">
     {% for post in tag[1] %}
       <li><a href="{{ post.url }}">{{ post.date | date: "%B %d, %Y" }} - {{ post.title }}</a></li>
