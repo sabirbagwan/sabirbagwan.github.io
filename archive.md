@@ -19,7 +19,8 @@ title: Blogs
 <style>
 .search-input {
 /*   width: 400px; */
-  width: 50%
+/*   width: 50% */
+  width: 50vw;  
   height: 27px;
 }
 </style>
