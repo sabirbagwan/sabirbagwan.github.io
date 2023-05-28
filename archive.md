@@ -18,8 +18,8 @@ title: Blogs
 
 <style>
 .search-input {
-  width: 300px;
-  height: 30px;
+  width: 400px;
+  height: 27px;
 }
 </style>
 
