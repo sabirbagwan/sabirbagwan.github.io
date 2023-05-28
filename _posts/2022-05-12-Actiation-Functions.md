@@ -1,3 +1,5 @@
+##Activation Functions: Their Role in Neural Networks
+
 Activation functions play a vital role in the functioning of artificial neural networks, enabling them to model complex relationships between input data and desired output. They introduce non-linearity into the network, allowing it to learn and make accurate predictions. In this article, we will delve into the concept of activation functions, their importance, and different types commonly used in neural networks.
 
 What are Activation Functions?
