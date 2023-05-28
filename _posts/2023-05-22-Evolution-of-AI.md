@@ -1,4 +1,4 @@
-## Advancements and Evolution of Deep Learning: From Machine Learning to Milestone Architectures
+<!-- ## Advancements and Evolution of Deep Learning: From Machine Learning to Milestone Architectures -->
 
 Deep learning has revolutionized the field of machine learning, enabling powerful algorithms that can learn and make intelligent decisions. 
 Over the years, deep learning has undergone significant advancements, marked by the introduction of milestone architectures. 
