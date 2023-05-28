@@ -1,3 +1,5 @@
+## Difference between CPU, GPU and TPU
+
 In the world of computing, there are three essential components that play a crucial role in processing data and performing various tasks: the Central Processing Unit (CPU), Graphics Processing Unit (GPU), and Tensor Processing Unit (TPU). Each of these processors has unique characteristics and capabilities that make them suitable for specific types of workloads. In this article, we will delve into the differences between CPU, GPU, and TPU, exploring their architectures, advantages, disadvantages, and use cases.
 
 **Central Processing Unit (CPU):**
