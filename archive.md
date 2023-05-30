@@ -30,6 +30,8 @@ title: Blogs
   <!-- <h3>{{ tag[0] }}</h3> -->
 <!--   <h3>All Blogs</h3> -->
 <!--   <input type="text" id="search-input" placeholder="Search by title" onkeyup="searchBlogs()"> -->
+    <p><a href="https://www.linkedin.com/in/sabirbagwan/recent-activity/articles/" target="_blank">Blogs on LinkedIn here</a> |
+      <a href="https://medium.com/@sabirbagwan" target="_blank">Blogs On Medium here</a></p>
   <input type="text" id="search-input" class="search-input" placeholder="Search by title or date" onkeyup="searchBlogs()">
 
   <ul id="blog-list">
