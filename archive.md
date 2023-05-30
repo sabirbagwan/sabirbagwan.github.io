@@ -33,6 +33,7 @@ title: Blogs
     <a href="https://www.linkedin.com/in/sabirbagwan/recent-activity/articles/" target="_blank">Blogs on LinkedIn here</a> |
       <a href="https://medium.com/@sabirbagwan" target="_blank">Blogs On Medium here</a>
       <br>
+      <br>
   <input type="text" id="search-input" class="search-input" placeholder="Search by title or date" onkeyup="searchBlogs()">
 
   <ul id="blog-list">
