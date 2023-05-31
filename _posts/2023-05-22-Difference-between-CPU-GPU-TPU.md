@@ -4,8 +4,7 @@ In the world of computing, there are three essential components that play a cruc
 
 **Central Processing Unit (CPU):**
 
-The CPU is the primary processing unit of a computer system. It serves as the "brain" of the computer, executing instructions, performing calculations, and managing tasks. CPUs typically have a few cores (ranging from 2 to 64 cores) optimized for general-purpose computing tasks. Here are some key aspects of CPUs:
-Architecture: CPUs are designed to handle a wide range of tasks, including running operating systems, executing applications, and handling user interactions. They prioritize tasks requiring sequential execution and fast response times.
+The CPU is the primary processing unit of a computer system. It serves as the "brain" of the computer, executing instructions, performing calculations, and managing tasks. CPUs typically have a few cores (ranging from 2 to 64 cores) optimized for general-purpose computing tasks. CPUs are designed to handle a wide range of tasks, including running operating systems, executing applications, and handling user interactions. They prioritize tasks requiring sequential execution and fast response times.
 
 Advantages:
 1. Versatility: CPUs excel at handling diverse workloads, such as web browsing, office applications, and running operating systems.
@@ -13,12 +12,10 @@ Advantages:
 
 Disadvantages:
 1. Limited Parallelism: CPUs have a relatively smaller number of cores compared to GPUs and TPUs, limiting their ability to handle highly parallel tasks efficiently.
-2. Higher Cost: CPUs tend to be more expensive than GPUs and TPUs, making them less cost-effective for certain workloads.
 
 **Graphics Processing Unit (GPU):**
 
-GPUs were initially designed to accelerate graphics rendering for computer games and other visual applications. Over time, they evolved into powerful parallel processors capable of handling computationally intensive tasks. Here are the key aspects of GPUs:
-Architecture: GPUs consist of thousands of smaller cores optimized for parallel processing. They are designed to handle large amounts of data simultaneously, making them suitable for tasks like image and video processing, machine learning, and scientific simulations.
+GPUs were initially designed to accelerate graphics rendering for computer games and other visual applications. Over time, they evolved into powerful parallel processors capable of handling computationally intensive tasks. GPUs consist of thousands of smaller cores optimized for parallel processing. They are designed to handle large amounts of data simultaneously, making them suitable for tasks like image and video processing, machine learning, and scientific simulations.
 
 Advantages:
 1. Parallel Processing Power: GPUs excel at performing parallel computations on large datasets, making them ideal for tasks that can be divided into smaller, independent units.
@@ -30,8 +27,7 @@ Disadvantages:
 
 **Tensor Processing Unit (TPU):**
 
-TPUs are specialized processors developed by Google specifically for machine learning workloads. They are designed to accelerate neural network computations, making them highly efficient for tasks involving artificial intelligence and deep learning. Here are the key aspects of TPUs:
-Architecture: TPUs are built with a specific focus on matrix operations and tensor calculations commonly used in machine learning algorithms. They deliver high performance by optimizing these operations and reducing memory latency.
+TPUs are specialized processors developed by Google specifically for machine learning workloads. They are designed to accelerate neural network computations, making them highly efficient for tasks involving artificial intelligence and deep learning. TPUs are built with a specific focus on matrix operations and tensor calculations commonly used in machine learning algorithms. They deliver high performance by optimizing these operations and reducing memory latency.
 
 Advantages:
 1. Superior Performance for Machine Learning: TPUs provide exceptional acceleration for training and inference tasks in deep learning models, enabling faster results and improved efficiency.
@@ -39,6 +35,6 @@ Advantages:
 
 Disadvantages:
 1. Limited General-purpose Capabilities: TPUs are primarily designed for machine learning workloads and may not provide the same versatility as CPUs and GPUs for non-AI tasks.
-2. Limited Availability: TPUs are not as widely available as
+2. Limited Availability: TPUs are not as widely available
 <br>
 <br>
