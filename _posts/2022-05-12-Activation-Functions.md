@@ -1,47 +1,41 @@
 ## Activation Functions: Their Role in Neural Networks
 
-Activation functions play a vital role in the functioning of artificial neural networks, enabling them to model complex relationships between input data and desired output. They introduce non-linearity into the network, allowing it to learn and make accurate predictions. In this article, we will delve into the concept of activation functions, their importance, and different types commonly used in neural networks.
+Activation functions are fundamental components of artificial neural networks, playing a crucial role in introducing non-linearity and enabling complex computations. They determine the output of a neuron, dictating the network's ability to learn and make predictions accurately. In this article, we will explore several types of activation functions commonly used in the field of deep learning, shedding light on their characteristics, strengths, and limitations.
 
-What are Activation Functions?
+**Step Function:
 
-An activation function is a mathematical function applied to the weighted sum of inputs and biases in a neuron. It determines whether the neuron should be activated or not, based on a threshold. Activation functions introduce non-linear transformations to the output of a neuron, allowing neural networks to learn complex patterns and make predictions beyond linear relationships.
+The simplest form of activation function is the step function. It outputs a binary value, typically 0 or 1, based on a predefined threshold. It is useful in binary classification problems, but its lack of continuity and non-differentiability limits its application in more complex tasks.
 
-Importance of Activation Functions:
+**Linear Activation Function:
 
-Activation functions serve several crucial purposes in neural networks:
-1. Non-linearity: Activation functions enable neural networks to model and approximate non-linear relationships present in real-world data, making them capable of solving complex problems.
-2. Decision Boundary: By applying a threshold, activation functions define the decision boundary for classification tasks, determining which class an input belongs to.
-3. Gradient Flow: Activation functions affect the flow of gradients during the backpropagation process, which is essential for updating the network's weights and optimizing the model.
+The linear activation function simply outputs the weighted sum of the inputs without introducing non-linearity. It is rarely used in hidden layers of neural networks as it results in a linear combination of linear functions, effectively reducing the network's expressiveness and limiting its ability to learn complex patterns.
 
-Types of Activation Functions:
-There are several popular activation functions used in neural networks. Let's explore some of them:
+**Sigmoid Function:
 
-Sigmoid Function:
+The sigmoid function, also known as the logistic function, transforms the weighted sum of inputs into a bounded range between 0 and 1. It has been widely used in the past, especially in binary classification problems. However, the sigmoid function suffers from the "vanishing gradient" problem, which impedes the training of deep neural networks.
 
-The sigmoid function is commonly used as an activation function. It maps the input to a value between 0 and 1, which can be interpreted as a probability. However, sigmoid functions suffer from the vanishing gradient problem and are not widely used in deep neural networks.
-Rectified Linear Unit (ReLU):
-ReLU is one of the most widely used activation functions. It returns the input if it is positive and zero otherwise. ReLU provides faster convergence during training, addresses the vanishing gradient problem, and is computationally efficient.
+**Hyperbolic Tangent (Tanh) Function:
 
-Leaky ReLU:
+The hyperbolic tangent function is similar to the sigmoid function but maps the inputs to a range between -1 and 1. Like the sigmoid, it is susceptible to the vanishing gradient problem. However, it is symmetric around the origin, which can aid in capturing both positive and negative patterns in the data.
 
-Leaky ReLU is a variant of ReLU that introduces a small slope for negative inputs, preventing the "dying ReLU" problem. It allows a small gradient to flow even for negative inputs, enhancing the performance of the neural network.
+**Rectified Linear Unit (ReLU):
 
-Hyperbolic Tangent (Tanh):
+ReLU has gained immense popularity in recent years. It computes the maximum between zero and the weighted sum of the inputs. ReLU effectively introduces non-linearity and avoids the vanishing gradient problem. It is computationally efficient and allows the network to learn sparse representations. However, ReLU suffers from the "dying ReLU" problem, where neurons can become inactive and not update their weights during training.
 
-Tanh function maps the input to a value between -1 and 1, making it suitable for classification tasks. It is similar to the sigmoid function but centered at zero, providing a stronger gradient and avoiding the saturation problem.
+**Leaky ReLU:
 
-Softmax:
+To address the dying ReLU problem, the Leaky ReLU was introduced. It allows a small, non-zero gradient when the input is negative. This slight modification enables better gradient flow and prevents neuron death, improving the learning capacity of deep neural networks.
 
-Softmax function is commonly used in the output layer of multi-class classification problems. It normalizes the output values into a probability distribution, ensuring that the sum of probabilities adds up to 1.
+**Parametric ReLU (PReLU):
 
-Choosing the Right Activation Function:
-The selection of the activation function depends on the nature of the problem, network architecture, and desired properties of the model. Some factors to consider include:
-1. Non-linearity requirements
-2. Avoiding gradient vanishing or exploding
-3. Computational efficiency
-4. Preservation of input range and data distribution
+PReLU is an extension of Leaky ReLU where the negative slope is learned during training. It allows the network to adaptively determine the slope, leading to improved performance compared to fixed negative slopes in Leaky ReLU.
 
-Conclusion:
-Activation functions are crucial components of neural networks, introducing non-linearity and enabling them to learn complex patterns from input data. Understanding the different types of activation functions and their characteristics helps in designing effective neural network architectures. By choosing the appropriate activation function, researchers and practitioners can improve the performance and accuracy of their models, enabling them to tackle a wide range of real-world problems.
-<br>
-<br>
+**Exponential Linear Unit (ELU):
+
+ELU is another activation function that aims to alleviate the vanishing gradient problem. It has a negative saturation regime for negative inputs, which enables faster learning compared to ReLU. ELU also maintains the advantages of ReLU in terms of sparsity and non-linearity.
+
+**Softmax Function:
+
+The softmax function is often used in the output layer of a neural network for multi-class classification problems. It normalizes the outputs to represent probabilities, ensuring that the sum of all class probabilities is equal to 1. It enables the network to make confident predictions by assigning higher probabilities to the most likely classes.
+
+Activation functions are crucial components of neural networks, introducing non-linearity and enabling complex computations. Choosing the appropriate activation function for a given task is essential, as it directly affects the network's learning capacity and performance. While this article covered several commonly used activation functions, researchers continue to explore novel activation functions to improve the
