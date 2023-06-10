@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Statistics Basics</title>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .col {
+      flex: 1;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-top: 0;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-top: 0;
+    }
+
+    h3 {
+      font-size: 20px;
+      margin-top: 0;
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .chart {
+      width: 800px;
+      height: 500px;
+      margin-bottom: 20px;
+    }
+
+    .slider {
+      width: 400px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Statistics Concepts</h1>
+  <div class="container">
+    <div class="col">
+      <h2>Mean</h2>
+      <div id="mean-slider" class="slider"></div>
+      <p id="mean-value">0.0</p>
+    </div>
+    <div class="col">
+      <h2>Median</h2>
+      <p>0.0</p>
+    </div>
+    <div class="col">
+      <h2>Mode</h2>
+      <p>0.0</p>
+    </div>
+    <div class="col">
+      <h2>St.D</h2>
+      <div id="std-dev-slider" class="slider"></div>
+      <p id="std-dev-value">1.0</p>
+    </div>
+    <div class="col">
+      <h2>Variance</h2>
+      <p>1.0</p>
+    </div>
+  </div>
+
+  <h2>Bell Curve with Histogram and KDE</h2>
+  <div id="chart" class="chart"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+  <script>
+    // Initialize sliders
+    var meanSlider = document.getElementById('mean-slider');
+    var stdDevSlider = document.getElementById('std-dev-slider');
+
+    // Set up options for sliders
+    var meanSliderOptions = {
+      skin: 'big',
+      min: -10.0,
+      max: 10.0,
+      step: 0.1,
+      grid: true,
+      onChange: function (data) {
+        document.getElementById('mean-value').innerText = data.from;
+      }
+    };
+
+    var stdDevSliderOptions = {
+      skin: 'big',
+      min: 0.1,
+      max: 10.0,
+      step: 0.1,
+      grid: true,
+      onChange: function (data) {
+        document.getElementById('std-dev-value').innerText = data.from;
+      }
+    };
+
+    // Initialize sliders with options
+    var meanSliderInstance = new IonRangeSlider(meanSlider, meanSliderOptions);
+    var stdDevSliderInstance = new IonRangeSlider(stdDevSlider, stdDevSliderOptions);
+
+    // Get data for the chart
+    var x = [];
+    var y = [];
+    // ... Replace with your data retrieval logic ...
+
+    // Create the trace for the bell curve
+    var trace = {
+      x: x,
+      y: y,
+      type: 'scatter',
+      mode: 'lines',
+      line: {
+        color: 'red',
+        width: 2
+      }
+    };
+
+    // Create the histogram trace
+    var histogramTrace = {
+      x: x,
+      type: 'histogram',
+      histnorm: 'probability',
+      marker: {
+        color: 'blue'
+      }
+    };
+
+    // Create the layout for the chart
+    var layout = {
+      title: 'Bell Curve with Histogram and KDE',
+      xaxis: {
+        title: 'X'
+      },
+      yaxis: {
+        title: 'Density'
+      }
+    };
+
+    // Combine the traces
+    var data = [trace, histogramTrace];
+
+    // Render the chart
+    Plotly.newPlot('chart', data, layout);
+  </script>
+</body>
+</html>
