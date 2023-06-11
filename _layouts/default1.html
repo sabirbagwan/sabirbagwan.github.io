@@ -86,6 +86,12 @@
       margin-bottom: 10px;
       text-align: center;
     }
+    .sect {
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+    }
+    
   </style>
 
   <body>
@@ -96,12 +102,16 @@
     <main class="page-content" aria-label="Content">
       <div>
         <!-- Recent Blog Posts -->
+        <div class="sect">
         <h2>Recent Blog Posts</h2>
         {% for post in site.posts limit:3 %}
         <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
         {% endfor %}
         <p><a href="/blog">See More</a></p>
+        </div>
 
+        
+        
         <!-- Recent Projects -->
         <h2>Recent Projects</h2>
         <div class="row">
