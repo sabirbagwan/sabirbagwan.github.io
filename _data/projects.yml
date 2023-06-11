@@ -1,6 +1,8 @@
 
-
-
+- title: Random Quote Generator
+  image: /assets/images/projectthumbnail/rcg.png
+  description: Hosted on Streamlit Share, app generates random quote.
+  url: https://sabirbagwan-random-quote-generator-app-bseudz.streamlit.app
 
 - title: EXIF Removal
   image: /assets/images/projectthumbnail/erl.png
@@ -27,31 +29,3 @@
   description: App gives a detailed analysis of the group.
   url: https://huggingface.co/spaces/sabirbagwan/WhatsappGroupAnalysis
 
-
-  
-# - title: Project 5
-#   image: /assets/images/projectthumbnail/WAGA.png
-#   description: This is the description for Project 3.
-#   link: /projects/project3.html
-  
-# - title: Project 6
-# #   image: /path/to/project3.jpg
-#   image: /assets/images/projectthumbnail/WAGA.png
-#   description: This is the description for Project 3.
-#   link: /projects/project3.html
-
-# - title: Project 7
-# #   image: /path/to/project3.jpg
-#   image: /assets/images/projectthumbnail/WAGA.png
-#   description: This is the description for Project 3.
-#   link: /projects/project3.html
-  
-  
-# - title: Project 7
-# #   image: /path/to/project3.jpg
-#   image: /assets/images/projectthumbnail/WAGA.png
-#   description: This is the description for Project 3.
-#   link: /projects/project3.html
-
-  
-# Add more projects as needed
