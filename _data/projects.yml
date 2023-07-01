@@ -14,6 +14,11 @@
   description: App summarizes the long text into short one.
   url: https://huggingface.co/spaces/sabirbagwan/Text_summary
 
+- title: WordCloud Generator
+  image: /assets/images/projectthumbnail/wcg.png
+  description: App generates a WordCloud of given words.
+  url: https://huggingface.co/spaces/sabirbagwan/WordCloudGenerator
+
 - title: SIP calculation
   image: /assets/images/projectthumbnail/sip.png
   description: App gives the analysis of SIP.
